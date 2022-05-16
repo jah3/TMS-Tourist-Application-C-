@@ -1,0 +1,670 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{30DA82E6-9E27-4A54-902D-E4C21CC3709D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>TMS</RootNamespace>
+    <AssemblyName>TMS</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bunifu.Licensing, Version=3.2.0.0, Culture=neutral, PublicKeyToken=f89b4760ba7dcb6b" />
+    <Reference Include="Bunifu.UI.WinForms.1.5.3">
+      <HintPath>D:\BunifuCrack-main\Bunifu.UI.WinForms.1.5.3.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuButton">
+      <HintPath>D:\BunifuCrack-main\Bunifu.UI.WinForms.BunifuButton.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuColorTransition">
+      <HintPath>D:\BunifuCrack-main\Bunifu.UI.WinForms.BunifuColorTransition.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuDataGridView">
+      <HintPath>D:\BunifuCrack-main\Bunifu.UI.WinForms.BunifuDataGridView.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuDatePicker">
+      <HintPath>D:\BunifuCrack-main\Bunifu.UI.WinForms.BunifuDatePicker.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuDropdown">
+      <HintPath>D:\BunifuCrack-main\Bunifu.UI.WinForms.BunifuDropdown.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuFormDock">
+      <HintPath>D:\BunifuCrack-main\Bunifu.UI.WinForms.BunifuFormDock.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuGradientPanel">
+      <HintPath>D:\BunifuCrack-main\Bunifu.UI.WinForms.BunifuGradientPanel.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuGroupBox">
+      <HintPath>D:\BunifuCrack-main\Bunifu.UI.WinForms.BunifuGroupBox.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuImageButton">
+      <HintPath>D:\BunifuCrack-main\Bunifu.UI.WinForms.BunifuImageButton.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuLabel">
+      <HintPath>D:\BunifuCrack-main\Bunifu.UI.WinForms.BunifuLabel.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuPages">
+      <HintPath>D:\BunifuCrack-main\Bunifu.UI.WinForms.BunifuPages.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuPanel">
+      <HintPath>D:\BunifuCrack-main\Bunifu.UI.WinForms.BunifuPanel.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuPictureBox">
+      <HintPath>D:\BunifuCrack-main\Bunifu.UI.WinForms.BunifuPictureBox.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuRating">
+      <HintPath>D:\BunifuCrack-main\Bunifu.UI.WinForms.BunifuRating.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuScrollBar">
+      <HintPath>D:\BunifuCrack-main\Bunifu.UI.WinForms.BunifuScrollBar.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuSeparator">
+      <HintPath>D:\BunifuCrack-main\Bunifu.UI.WinForms.BunifuSeparator.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuShadowPanel">
+      <HintPath>D:\BunifuCrack-main\Bunifu.UI.WinForms.BunifuShadowPanel.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuShapes">
+      <HintPath>D:\BunifuCrack-main\Bunifu.UI.WinForms.BunifuShapes.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuSlider">
+      <HintPath>D:\BunifuCrack-main\Bunifu.UI.WinForms.BunifuSlider.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuSnackbar">
+      <HintPath>D:\BunifuCrack-main\Bunifu.UI.WinForms.BunifuSnackbar.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuTextbox">
+      <HintPath>D:\BunifuCrack-main\Bunifu.UI.WinForms.BunifuTextbox.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuToolTip">
+      <HintPath>D:\BunifuCrack-main\Bunifu.UI.WinForms.BunifuToolTip.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuTransition">
+      <HintPath>D:\BunifuCrack-main\Bunifu.UI.WinForms.BunifuTransition.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebDesign, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.150.1484.0\lib\net40\Microsoft.ReportViewer.WebDesign.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Report.Viewer.11.0.0.0\lib\net\Microsoft.ReportViewer.WebForms.DLL</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.1016.290\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Messaging" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdminFormDataBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminFormDataBase.Designer.cs">
+      <DependentUpon>AdminFormDataBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Expanded Information.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Expanded Information.Designer.cs">
+      <DependentUpon>Expanded Information.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReportFORM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportFORM.Designer.cs">
+      <DependentUpon>ReportFORM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="TurismDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TurismDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="TurismDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TurismDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="TurismDataSet10.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TurismDataSet10.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="TurismDataSet11.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TurismDataSet11.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="TurismDataSet12.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TurismDataSet12.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="TurismDataSet13.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TurismDataSet13.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="TurismDataSet14.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TurismDataSet14.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="TurismDataSet15.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TurismDataSet15.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="TurismDataSet16.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TurismDataSet16.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="TurismDataSet17.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TurismDataSet17.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="TurismDataSet18.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TurismDataSet18.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="TurismDataSet19.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TurismDataSet19.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="TurismDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TurismDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="TurismDataSet20.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TurismDataSet20.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="TurismDataSet21.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TurismDataSet21.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="TurismDataSet22.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TurismDataSet22.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="TurismDataSet23.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TurismDataSet23.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="TurismDataSet24.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TurismDataSet24.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="TurismDataSet25.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TurismDataSet25.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="TurismDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TurismDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="TurismDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TurismDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="TurismDataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TurismDataSet5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="TurismDataSet6.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TurismDataSet6.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="TurismDataSet7.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TurismDataSet7.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="TurismDataSet8.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TurismDataSet8.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="TurismDataSet9.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TurismDataSet9.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Turism_adminDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Turism_adminDataSet.xsd</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AdminFormDataBase.resx">
+      <DependentUpon>AdminFormDataBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Expanded Information.resx">
+      <DependentUpon>Expanded Information.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Raport.rdlc" />
+    <EmbeddedResource Include="ReportFORM.resx">
+      <DependentUpon>ReportFORM.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="TurismDataSet.xsc">
+      <DependentUpon>TurismDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="TurismDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TurismDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="TurismDataSet.xss">
+      <DependentUpon>TurismDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="TurismDataSet1.xsc">
+      <DependentUpon>TurismDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="TurismDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TurismDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="TurismDataSet1.xss">
+      <DependentUpon>TurismDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="TurismDataSet10.xsc">
+      <DependentUpon>TurismDataSet10.xsd</DependentUpon>
+    </None>
+    <None Include="TurismDataSet10.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TurismDataSet10.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="TurismDataSet10.xss">
+      <DependentUpon>TurismDataSet10.xsd</DependentUpon>
+    </None>
+    <None Include="TurismDataSet11.xsc">
+      <DependentUpon>TurismDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="TurismDataSet11.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TurismDataSet11.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="TurismDataSet11.xss">
+      <DependentUpon>TurismDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="TurismDataSet12.xsc">
+      <DependentUpon>TurismDataSet12.xsd</DependentUpon>
+    </None>
+    <None Include="TurismDataSet12.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TurismDataSet12.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="TurismDataSet12.xss">
+      <DependentUpon>TurismDataSet12.xsd</DependentUpon>
+    </None>
+    <None Include="TurismDataSet13.xsc">
+      <DependentUpon>TurismDataSet13.xsd</DependentUpon>
+    </None>
+    <None Include="TurismDataSet13.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TurismDataSet13.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="TurismDataSet13.xss">
+      <DependentUpon>TurismDataSet13.xsd</DependentUpon>
+    </None>
+    <None Include="TurismDataSet14.xsc">
+      <DependentUpon>TurismDataSet14.xsd</DependentUpon>
+    </None>
+    <None Include="TurismDataSet14.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TurismDataSet14.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="TurismDataSet14.xss">
+      <DependentUpon>TurismDataSet14.xsd</DependentUpon>
+    </None>
+    <None Include="TurismDataSet15.xsc">
+      <DependentUpon>TurismDataSet15.xsd</DependentUpon>
+    </None>
+    <None Include="TurismDataSet15.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TurismDataSet15.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="TurismDataSet15.xss">
+      <DependentUpon>TurismDataSet15.xsd</DependentUpon>
+    </None>
+    <None Include="TurismDataSet16.xsc">
+      <DependentUpon>TurismDataSet16.xsd</DependentUpon>
+    </None>
+    <None Include="TurismDataSet16.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TurismDataSet16.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="TurismDataSet16.xss">
+      <DependentUpon>TurismDataSet16.xsd</DependentUpon>
+    </None>
+    <None Include="TurismDataSet17.xsc">
+      <DependentUpon>TurismDataSet17.xsd</DependentUpon>
+    </None>
+    <None Include="TurismDataSet17.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TurismDataSet17.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="TurismDataSet17.xss">
+      <DependentUpon>TurismDataSet17.xsd</DependentUpon>
+    </None>
+    <None Include="TurismDataSet18.xsc">
+      <DependentUpon>TurismDataSet18.xsd</DependentUpon>
+    </None>
+    <None Include="TurismDataSet18.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TurismDataSet18.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="TurismDataSet18.xss">
+      <DependentUpon>TurismDataSet18.xsd</DependentUpon>
+    </None>
+    <None Include="TurismDataSet19.xsc">
+      <DependentUpon>TurismDataSet19.xsd</DependentUpon>
+    </None>
+    <None Include="TurismDataSet19.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TurismDataSet19.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="TurismDataSet19.xss">
+      <DependentUpon>TurismDataSet19.xsd</DependentUpon>
+    </None>
+    <None Include="TurismDataSet2.xsc">
+      <DependentUpon>TurismDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="TurismDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TurismDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="TurismDataSet2.xss">
+      <DependentUpon>TurismDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="TurismDataSet20.xsc">
+      <DependentUpon>TurismDataSet20.xsd</DependentUpon>
+    </None>
+    <None Include="TurismDataSet20.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TurismDataSet20.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="TurismDataSet20.xss">
+      <DependentUpon>TurismDataSet20.xsd</DependentUpon>
+    </None>
+    <None Include="TurismDataSet21.xsc">
+      <DependentUpon>TurismDataSet21.xsd</DependentUpon>
+    </None>
+    <None Include="TurismDataSet21.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TurismDataSet21.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="TurismDataSet21.xss">
+      <DependentUpon>TurismDataSet21.xsd</DependentUpon>
+    </None>
+    <None Include="TurismDataSet22.xsc">
+      <DependentUpon>TurismDataSet22.xsd</DependentUpon>
+    </None>
+    <None Include="TurismDataSet22.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TurismDataSet22.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="TurismDataSet22.xss">
+      <DependentUpon>TurismDataSet22.xsd</DependentUpon>
+    </None>
+    <None Include="TurismDataSet23.xsc">
+      <DependentUpon>TurismDataSet23.xsd</DependentUpon>
+    </None>
+    <None Include="TurismDataSet23.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TurismDataSet23.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="TurismDataSet23.xss">
+      <DependentUpon>TurismDataSet23.xsd</DependentUpon>
+    </None>
+    <None Include="TurismDataSet24.xsc">
+      <DependentUpon>TurismDataSet24.xsd</DependentUpon>
+    </None>
+    <None Include="TurismDataSet24.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TurismDataSet24.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="TurismDataSet24.xss">
+      <DependentUpon>TurismDataSet24.xsd</DependentUpon>
+    </None>
+    <None Include="TurismDataSet25.xsc">
+      <DependentUpon>TurismDataSet25.xsd</DependentUpon>
+    </None>
+    <None Include="TurismDataSet25.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TurismDataSet25.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="TurismDataSet25.xss">
+      <DependentUpon>TurismDataSet25.xsd</DependentUpon>
+    </None>
+    <None Include="TurismDataSet3.xsc">
+      <DependentUpon>TurismDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="TurismDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TurismDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="TurismDataSet3.xss">
+      <DependentUpon>TurismDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="TurismDataSet4.xsc">
+      <DependentUpon>TurismDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="TurismDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TurismDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="TurismDataSet4.xss">
+      <DependentUpon>TurismDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="TurismDataSet5.xsc">
+      <DependentUpon>TurismDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="TurismDataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TurismDataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="TurismDataSet5.xss">
+      <DependentUpon>TurismDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="TurismDataSet6.xsc">
+      <DependentUpon>TurismDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="TurismDataSet6.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TurismDataSet6.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="TurismDataSet6.xss">
+      <DependentUpon>TurismDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="TurismDataSet7.xsc">
+      <DependentUpon>TurismDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="TurismDataSet7.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TurismDataSet7.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="TurismDataSet7.xss">
+      <DependentUpon>TurismDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="TurismDataSet8.xsc">
+      <DependentUpon>TurismDataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="TurismDataSet8.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TurismDataSet8.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="TurismDataSet8.xss">
+      <DependentUpon>TurismDataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="TurismDataSet9.xsc">
+      <DependentUpon>TurismDataSet9.xsd</DependentUpon>
+    </None>
+    <None Include="TurismDataSet9.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TurismDataSet9.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="TurismDataSet9.xss">
+      <DependentUpon>TurismDataSet9.xsd</DependentUpon>
+    </None>
+    <None Include="Turism_adminDataSet.xsc">
+      <DependentUpon>Turism_adminDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Turism_adminDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Turism_adminDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Turism_adminDataSet.xss">
+      <DependentUpon>Turism_adminDataSet.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img.jpg" />
+    <None Include="Resources\img2.jpg" />
+    <None Include="Resources\img3.jpg" />
+    <None Include="Resources\img4.jpg" />
+    <None Include="Resources\img5.jpg" />
+    <None Include="Resources\img6.jpg" />
+    <None Include="Resources\img7.jpg" />
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
