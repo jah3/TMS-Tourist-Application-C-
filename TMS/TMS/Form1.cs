@@ -125,6 +125,11 @@ namespace TMS
 
         }
 
+        private void To_TextChanged(object sender, EventArgs e)
+        {
+           
+        }
+
         private void bunifuPanel1_Click(object sender, EventArgs e)
         {
         }
@@ -166,142 +171,142 @@ namespace TMS
         int pos = 0;
         private void Search_Click(object sender, EventArgs e)
         {
-            tour.CustomFormat = "yyyy-MMM-dd";
-            tour_ = tour.Value.ToShortDateString();
-
-            retour.CustomFormat = "yyyy-MMM-dd";
-            retour_ = tour.Value.ToShortDateString();
-            
-
-           
-          
+            if(To.Text == "Denmark" || To.Text == "Cyprus" || To.Text == "Japan" || To.Text == "Orhei" || To.Text == "Turkey" || To.Text == "Greece")
+            {
+                tour.CustomFormat = "yyyy-MMM-dd";
+                tour_ = tour.Value.ToShortDateString();
+                retour.CustomFormat = "yyyy-MMM-dd";
+                retour_ = tour.Value.ToShortDateString();
                 bunifuShadowPanel3.Visible = false;
                 bunifuShadowPanel4.Visible = false;
                 bunifuShadowPanel5.Visible = false;
                 bunifuShadowPanel6.Visible = true;
 
-            if(To.Text == "Denmark")
-            {
-                transport.Items.Add("Danish Air Flybilletter");
-                transport.Items.Add("Denmark Bus: Havnbus");
-                City.Items.Add("Odense");
-                City.Items.Add("Arhus");
-                pages.TabPages.Remove(tabPage3);
-                pages.TabPages.Remove(tabPage4);
-                pages.TabPages.Remove(tabPage5);
-                pages.TabPages.Remove(tabPage6);
-                pages.TabPages.Remove(tabPage12);
-                pages.TabPages.Remove(tabPage13);
-                pages.TabPages.Remove(tabPage14);
-                pages.TabPages.Remove(tabPage15);
-                pages.TabPages.Remove(tabPage16);
-                pages.TabPages.Remove(tabPage17);
-            }
-            else if (To.Text == "Cyprus")
-            {
-                pos = 3;
-                transport.Items.Add("Cyprus Airways");
-                transport.Items.Add("Love Buses Cyprus");
-                City.Items.Add("Nicosia");
-                City.Items.Add("Paphos");
-                pages.PageTitle = "tabPage3";
-                pages.TabPages.Remove(tabPage1);
-                pages.TabPages.Remove(tabPage2);
+                if (To.Text == "Denmark")
+                {
+                    transport.Items.Add("Danish Air Flybilletter");
+                    transport.Items.Add("Denmark Bus: Havnbus");
+                    City.Items.Add("Odense");
+                    City.Items.Add("Arhus");
+                    pages.TabPages.Remove(tabPage3);
+                    pages.TabPages.Remove(tabPage4);
+                    pages.TabPages.Remove(tabPage5);
+                    pages.TabPages.Remove(tabPage6);
+                    pages.TabPages.Remove(tabPage12);
+                    pages.TabPages.Remove(tabPage13);
+                    pages.TabPages.Remove(tabPage14);
+                    pages.TabPages.Remove(tabPage15);
+                    pages.TabPages.Remove(tabPage16);
+                    pages.TabPages.Remove(tabPage17);
+                }
+                else if (To.Text == "Cyprus")
+                {
+                    pos = 3;
+                    transport.Items.Add("Cyprus Airways");
+                    transport.Items.Add("Love Buses Cyprus");
+                    City.Items.Add("Nicosia");
+                    City.Items.Add("Paphos");
+                    pages.PageTitle = "tabPage3";
+                    pages.TabPages.Remove(tabPage1);
+                    pages.TabPages.Remove(tabPage2);
 
 
-                pages.TabPages.Remove(tabPage5);
-                pages.TabPages.Remove(tabPage6);
-                pages.TabPages.Remove(tabPage12);
-                pages.TabPages.Remove(tabPage13);
-                pages.TabPages.Remove(tabPage14);
-                pages.TabPages.Remove(tabPage15);
-                pages.TabPages.Remove(tabPage16);
-                pages.TabPages.Remove(tabPage17);
-            }
-            else if(To.Text == "Japan")
-            {
-                pos = 5;
-                transport.Items.Add("Japan Airline");
-                transport.Items.Add("ANA, Turkish Airlines");
-                City.Items.Add("Okinawa");
-                City.Items.Add("Kyoto");
-                pages.PageTitle = "tabPage5";
-                pages.TabPages.Remove(tabPage1);
-                pages.TabPages.Remove(tabPage2);
-                pages.TabPages.Remove(tabPage3);
-                pages.TabPages.Remove(tabPage4);
-                pages.TabPages.Remove(tabPage12);
-                pages.TabPages.Remove(tabPage13);
-                pages.TabPages.Remove(tabPage14);
-                pages.TabPages.Remove(tabPage15);
-                pages.TabPages.Remove(tabPage16);
-                pages.TabPages.Remove(tabPage17);
-            }
-            else if (To.Text == "Orhei")
-            {
-                pos = 13;
-                transport.Items.Add("MoldovaBus");
-                transport.Items.Add("Rutiera");
-                City.Items.Add("Old Orhei");
-                City.Items.Add("Orhei Land");
-                pages.PageTitle = "tabPage13";
-                pages.TabPages.Remove(tabPage1);
-                pages.TabPages.Remove(tabPage2);
-                pages.TabPages.Remove(tabPage3);
-                pages.TabPages.Remove(tabPage4);
-                pages.TabPages.Remove(tabPage5);
-                pages.TabPages.Remove(tabPage6);
-                pages.TabPages.Remove(tabPage12);
-    
-                pages.TabPages.Remove(tabPage14);
-      
-                pages.TabPages.Remove(tabPage16);
-                pages.TabPages.Remove(tabPage17);
-            }
-            else if (To.Text == "Turkey")
-            {
-                pos = 12;
-                transport.Items.Add("Turkish Airlines");
-                transport.Items.Add("Multiple Airlines");
-                City.Items.Add("Antalya");
-                City.Items.Add("Hagia Sophia");
-                pages.PageTitle = "tabPage12";
-                pages.TabPages.Remove(tabPage1);
-                pages.TabPages.Remove(tabPage2);
-                pages.TabPages.Remove(tabPage3);
-                pages.TabPages.Remove(tabPage4);
-                pages.TabPages.Remove(tabPage5);
-                pages.TabPages.Remove(tabPage6);
-                pages.TabPages.Remove(tabPage13);
-                pages.TabPages.Remove(tabPage15);       
-              
-                pages.TabPages.Remove(tabPage16);
-                pages.TabPages.Remove(tabPage17);
-            }
-            else if (To.Text == "Greece")
-            {
-                pos = 16;
-                transport.Items.Add("Airline:Ryanair");
-                transport.Items.Add("Airline:easyJet");
-                City.Items.Add("Crete");
-                City.Items.Add("Santorini");
-                pages.PageTitle = "tabPage16";
-                pages.TabPages.Remove(tabPage1);
-                pages.TabPages.Remove(tabPage2);
-                pages.TabPages.Remove(tabPage3);
-                pages.TabPages.Remove(tabPage4);
-                pages.TabPages.Remove(tabPage5);
-                pages.TabPages.Remove(tabPage6);
-                pages.TabPages.Remove(tabPage12);
-                pages.TabPages.Remove(tabPage13);
-                pages.TabPages.Remove(tabPage14);
-                pages.TabPages.Remove(tabPage15);
-                
-                
-            }
-            else { }
+                    pages.TabPages.Remove(tabPage5);
+                    pages.TabPages.Remove(tabPage6);
+                    pages.TabPages.Remove(tabPage12);
+                    pages.TabPages.Remove(tabPage13);
+                    pages.TabPages.Remove(tabPage14);
+                    pages.TabPages.Remove(tabPage15);
+                    pages.TabPages.Remove(tabPage16);
+                    pages.TabPages.Remove(tabPage17);
+                }
+                else if (To.Text == "Japan")
+                {
+                    pos = 5;
+                    transport.Items.Add("Japan Airline");
+                    transport.Items.Add("ANA, Turkish Airlines");
+                    City.Items.Add("Okinawa");
+                    City.Items.Add("Kyoto");
+                    pages.PageTitle = "tabPage5";
+                    pages.TabPages.Remove(tabPage1);
+                    pages.TabPages.Remove(tabPage2);
+                    pages.TabPages.Remove(tabPage3);
+                    pages.TabPages.Remove(tabPage4);
+                    pages.TabPages.Remove(tabPage12);
+                    pages.TabPages.Remove(tabPage13);
+                    pages.TabPages.Remove(tabPage14);
+                    pages.TabPages.Remove(tabPage15);
+                    pages.TabPages.Remove(tabPage16);
+                    pages.TabPages.Remove(tabPage17);
+                }
+                else if (To.Text == "Orhei")
+                {
+                    pos = 13;
+                    transport.Items.Add("MoldovaBus");
+                    transport.Items.Add("Rutiera");
+                    City.Items.Add("Old Orhei");
+                    City.Items.Add("Orhei Land");
+                    pages.PageTitle = "tabPage13";
+                    pages.TabPages.Remove(tabPage1);
+                    pages.TabPages.Remove(tabPage2);
+                    pages.TabPages.Remove(tabPage3);
+                    pages.TabPages.Remove(tabPage4);
+                    pages.TabPages.Remove(tabPage5);
+                    pages.TabPages.Remove(tabPage6);
+                    pages.TabPages.Remove(tabPage12);
 
- 
+                    pages.TabPages.Remove(tabPage14);
+
+                    pages.TabPages.Remove(tabPage16);
+                    pages.TabPages.Remove(tabPage17);
+                }
+                else if (To.Text == "Turkey")
+                {
+                    pos = 12;
+                    transport.Items.Add("Turkish Airlines");
+                    transport.Items.Add("Multiple Airlines");
+                    City.Items.Add("Antalya");
+                    City.Items.Add("Hagia Sophia");
+                    pages.PageTitle = "tabPage12";
+                    pages.TabPages.Remove(tabPage1);
+                    pages.TabPages.Remove(tabPage2);
+                    pages.TabPages.Remove(tabPage3);
+                    pages.TabPages.Remove(tabPage4);
+                    pages.TabPages.Remove(tabPage5);
+                    pages.TabPages.Remove(tabPage6);
+                    pages.TabPages.Remove(tabPage13);
+                    pages.TabPages.Remove(tabPage15);
+
+                    pages.TabPages.Remove(tabPage16);
+                    pages.TabPages.Remove(tabPage17);
+                }
+                else if (To.Text == "Greece")
+                {
+                    pos = 16;
+                    transport.Items.Add("Airline:Ryanair");
+                    transport.Items.Add("Airline:easyJet");
+                    City.Items.Add("Crete");
+                    City.Items.Add("Santorini");
+                    pages.PageTitle = "tabPage16";
+                    pages.TabPages.Remove(tabPage1);
+                    pages.TabPages.Remove(tabPage2);
+                    pages.TabPages.Remove(tabPage3);
+                    pages.TabPages.Remove(tabPage4);
+                    pages.TabPages.Remove(tabPage5);
+                    pages.TabPages.Remove(tabPage6);
+                    pages.TabPages.Remove(tabPage12);
+                    pages.TabPages.Remove(tabPage13);
+                    pages.TabPages.Remove(tabPage14);
+                    pages.TabPages.Remove(tabPage15);
+
+
+                }
+                else { }
+
+            }
+            else if(To.Text == "Ukraine") { MessageBox.Show("данный абонент подвергается бомбардировке \n Слава Україні!", "BOMB ALERT!"); To.Text = ""; }
+            else { MessageBox.Show("We are sorry, but unfortunately we do not have a tour to that country yet","Error"); To.Text = ""; }
+
             timer1.Enabled = false;
         }
         
