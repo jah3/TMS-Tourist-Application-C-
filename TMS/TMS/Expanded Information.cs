@@ -19,7 +19,7 @@ namespace TMS
         public Expanded_Information()
         {
             InitializeComponent();
-           
+            bunifuTextBox2.UseSystemPasswordChar = true;
         }
 
         private void Close_Click(object sender, EventArgs e)
@@ -83,6 +83,22 @@ namespace TMS
                 e.Handled = true;
                 bunifuButton1.PerformClick();
             }
+        }
+
+        private void bunifuCheckBox1_CheckedChanged(object sender, Bunifu.UI.WinForms.BunifuCheckBox.CheckedChangedEventArgs e)
+        {
+            if(bunifuCheckBox1.Checked == true)
+            {
+                bunifuTextBox2.UseSystemPasswordChar = false;
+            }
+            else if(bunifuCheckBox1.Checked == false)
+                { bunifuTextBox2.UseSystemPasswordChar = true; }
+            else { }
+        }
+
+        private void bunifuLabel3_Click(object sender, EventArgs e)
+        {
+         System.Diagnostics.Process.Start("https://mail.google.com/mail/u/1/#inbox?compose=GTvVlcSMTgdXzsWShncKbwzTSmcKRdmzmsZHSZbLGkNDvFgzLQrQTgNlzsNVbrmCjXdbJVvhVlSnK");
         }
     }
 }

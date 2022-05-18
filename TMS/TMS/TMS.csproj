@@ -40,6 +40,9 @@
     <Reference Include="Bunifu.UI.WinForms.BunifuButton">
       <HintPath>D:\BunifuCrack-main\Bunifu.UI.WinForms.BunifuButton.dll</HintPath>
     </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuCheckBox">
+      <HintPath>D:\BunifuCrack-main\Bunifu.UI.WinForms.BunifuCheckBox.dll</HintPath>
+    </Reference>
     <Reference Include="Bunifu.UI.WinForms.BunifuColorTransition">
       <HintPath>D:\BunifuCrack-main\Bunifu.UI.WinForms.BunifuColorTransition.dll</HintPath>
     </Reference>

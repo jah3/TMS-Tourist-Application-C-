@@ -224,3 +224,4 @@ C:\Users\user\Desktop\PracticaMain\TMS\TMS\bin\Debug\EntityFramework.dll
 C:\Users\user\Desktop\PracticaMain\TMS\TMS\bin\Debug\EntityFramework.SqlServer.dll
 C:\Users\user\Desktop\PracticaMain\TMS\TMS\bin\Debug\EntityFramework.xml
 C:\Users\user\Desktop\PracticaMain\TMS\TMS\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\user\Desktop\PracticaMain\TMS\TMS\bin\Debug\Bunifu.UI.WinForms.BunifuCheckBox.dll
