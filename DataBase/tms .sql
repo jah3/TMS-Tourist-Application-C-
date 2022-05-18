@@ -101,7 +101,25 @@ insert into destination values
 			 (15,'Chisinau', 'Turkey', '5/4/2022', '5/18/2022', 3),
 			 (16,'Moldova',  'Greece', '5/4/2022', '5/26/2022', 2),
 			 (17,'Moldova',  'Greece', '5/4/2022', '5/26/2022', 2),
-			 (18,'Moldova',  'Greece', '5/4/2022', '5/26/2022', 2);
+			 (18,'Moldova',  'Greece', '5/4/2022', '5/26/2022', 2),
+			 (19, 'Moldova', 'Japan',  '5/18/2022', '5/28/2022', 3),
+			 (20, 'Moldova', 'Japan',  '8/26/2022', '9/13/2022', 5),
+			 (21, 'Moldova', 'Greece', '5/27/2022', '6/14/2022', 2),
+			 (22, 'Greece',  'Japan',  '5/26/2022', '6/3/2022', 2),
+			 (23, 'Japan',   'Greece', '5/21/2022', '6/30/2022', 6),
+			 (24, 'Denmark', 'Turkey', '6/30/2022', '7/14/2022', 4),
+			 (25, 'Moldova', 'Turkey', '6/21/2022', '7/7/2022', 5),
+			 (26, 'Denmark', 'Cyprus', '5/26/2022', '5/28/2022', 3),
+			 (27, 'Moldova', 'Cyprus', '5/26/2022', '5/28/2022', 3),
+			 (28, 'Moldova', 'Cyprus', '5/20/2022', '6/3/2022', 4),
+			 (29, 'Moldova ','Japan',  '6/17/2022', '6/30/2022', 5),
+			 (30, 'Chisinau','Orhei',  '7/21/2022', '7/28/2022', 2),
+			 (31, 'Moldova', 'Turkey', '7/13/2022', '7/19/2022', 2),
+			 (32, 'Moldova', 'Turkey', '7/21/2022', '7/22/2022', 3),
+			 (33, 'Moldova', 'Greece', '4/27/2022', '5/26/2022', 3),
+			 (34, 'Moldova', 'Japan',  '5/6/2022',  '6/9/2022', 3),
+			 (35, 'Roma',    'Orhei',  '5/7/2022',  '5/27/2022', 5),
+			 (36, 'China',	 'Japan',  '5/11/2022', '5/28/2022', 3);
 
 iNSERT into customer VALUES
 			(1,'Ion','Gutu','Lomonosov 2/5','gutuionica@gamail.com',1),
@@ -121,7 +139,24 @@ iNSERT into customer VALUES
 			(15,'Silvana ', 'Ardeleanu ', N'Str-la Padurii 003', 'vlad.macovei@oancea.biz', 15),
 			(16,'Carmen', 'Trif ', 'Str-la Cire?ilor 0', 'iancu80@tudose.com', 16),
 			(17,'Corvin ', 'Alexa ', 'P-ta Padurii nr. 3A', 'tgrosu@hotmail.com', 17),
-			(18,'Gica ', 'Georgescu ', 'B-dul. Chisinau 021', 'flaviu07@gmail.com', 18);
+			(18,'Gica ', 'Georgescu ', 'B-dul. Chisinau 021', 'flaviu07@gmail.com', 18),
+			(19, 'Ion',   'Tacu', 'G.Asachi 12/4', 'Tacu12@gmail.com', 19),
+			(20, 'Iulian','Godur', 'G.Asachi 10/4', 'Godur@gmail.com', 20),
+			(21, 'Ian',   'Gemoroi', 'trada Evreu 21', 'Gemoroi21@gmail.com', 21),
+			(22, 'Clarence', N'Rhodes', 'P. Hasdeu nr. 1B', 'ClarenceIOn@gmail.com', 22),
+			(23, 'Janet', 'Steinke', 'Mircea cel Batrân nr. 0B', 'Steinke33@gmail.com', 24),
+			(24, 'Della', 'Rascon', 'Arhangelul Mihail 5A', 'Rascon2322@gmail.com', 25),
+			(25, 'Debra', 'Green', 'Aleea Decebal nr. 53', 'GrEEn@gmail.com', 26),
+			(26, 'Virginia', 'Pennypacker', 'Calea Frasinului nr. 1/6', 'Pennypacker@gmail.com', 27),
+			(27, 'Demetria', 'Colbert', 'Calea Frunzisului 508', 'Colbert@gmail.com', 28),
+			(28, 'Sharon', 'Austin', 'Aleea Salcâmilor nr. 1', 'Shar0n@gmail.com', 29),
+			(29, 'Elmo', 'Shade', 'Mitropolitul Varlaam nr. 9', '5had6@gmail.com', 30),
+			(30, 'Michael', 'Harper', 'Str Traian nr. 47', '8arp9r@gmail.com', 31),
+			(31, 'Mary', 'Gunter', 'Str. Salcâmilor 0A', '6un7er@gmail.com', 32),
+			(32, 'Daryl', 'Rutz', 'Calea Independentei nr.8A', 'Rut7@gmail.com', 33),
+			(33, 'Ian', 'Anderson', 'Str-la Decebal 4A', '4nders0n@gmail.com', 34),
+			(34, 'Alexandru', 'Macedon', 'Sarmisegetuza12', 'Macedon69@gmail.com', 35),
+			(35, 'Maxim', 'Cioban', 'Alecoruso2/3', 'Ci0ban@gmail.com', 36);
 
 
 insert into housing values
@@ -142,7 +177,25 @@ insert into housing values
 			(15, 'Turkey', 'Antalya', 'Crowne Plaza Antalya, an IHG Hotel', 5, 80),
 			(16, 'Greece', 'Crete', 'Mrs Chryssana Beach Hotel', 4, 75),
 			(17, 'Greece', 'Santorini', 'Santo Miramare Resort', 5, 80),
-			(18, 'Greece', 'Crete', 'Mrs Chryssana Beach Hotel', 4, 75);
+			(18, 'Greece', 'Crete', 'Mrs Chryssana Beach Hotel', 4, 75),
+			(19,'Japan', 'Okinawa', 'Sunrise Kanko Hotel', 5, 80),
+			(20,'Japan', 'Kyoto', 'Okinawa Grand Mer Resort', 4, 70),
+			(21,'Greece','Crete', 'Mrs Chryssana Beach Hotel', 4, 75),
+			(22,'Japan', 'Okinawa', 'Sunrise Kanko Hotel', 5, 80),
+			(23,'Greece','Crete', 'Mrs Chryssana Beach Hotel', 4, 75),
+			(24,'Turkey','Antalya', 'Crowne Plaza Antalya, an IHG Hotel', 5, 80),
+			(25,'Turkey','Antalya', 'Akra Hotel', 5, 100),
+			(26,'Cyprus','Nicosia', 'Art & Wine Studios and Apts', 3, 93),
+			(27,'Cyprus','Nicosia', 'Art & Wine Studios and Apts', 3, 93),
+			(28,'Cyprus','Paphos', 'Mikes Kanarium City Hotel', 3, 73),
+			(29,'Japan', 'Kyoto', 'Okinawa Grand Mer Resort', 4, 70),
+			(30,'Orhei', 'Old Orhei', 'STARK HOTEL', 3, 40),
+			(31,'Turkey','Hagia Sophia', 'Akra Hotel', 5, 100),
+			(32,'Turkey','Antalya', 'Akra Hotel', 5, 100),
+			(33,'Greece','Crete', 'Santo Miramare Resort', 5, 80),
+			(34,'Japan', 'Okinawa', 'Sunrise Kanko Hotel', 5, 80),
+			(35,'Orhei', 'Old Orhei', 'Book Vila Elat ', 5, 20),
+			(36,'Japan', 'Kyoto', 'Sunrise Kanko Hotel', 5, 80);
 
 
 
@@ -178,7 +231,24 @@ insert into package values
 			(15, 35, 14,'Diamond','+357422744', 15, 15, 15, 9),
 			(16, 10, 22,'Silver', '+454227442', 5, 16, 16, 11),
 			(17, 20, 22,'Gold',   '+424254442', 10, 17, 17, 12),
-			(18, 35, 22,'Diamond','+357422744', 15, 18, 18, 11);
+			(18, 35, 22,'Diamond','+357422744', 15, 18, 18, 11),
+			(19, 20, 10, 'Gold', '+424254442', 10, 19, 19, 5),
+			(20, 20, 18, 'Gold', '+424254442', 10, 20, 20, 5),
+			(21, 35, 18, 'Diamond', '+357422744', 15, 21, 21, 11),
+			(22, 20, 8, 'Gold', '+424254442', 10, 22, 22, 6),
+			(23, 10, 14, 'Silver', '+454227442', 5, 24, 24, 10),
+			(24, 20, 16, 'Gold', '+424254442', 10, 25, 25, 9),
+			(25, 20, 2, 'Gold', '+424254442', 10, 26, 26, 4),
+			(26, 20, 2, 'Gold', '+424254442', 10, 27, 27, 3),
+			(27, 35, 14, 'Diamond', '+357422744', 15, 28, 28, 4),
+			(28, 35, 13, 'Diamond', '+357422744', 15, 29, 29, 6),
+			(29, 20, 7, 'Gold', '+424254442', 10, 30, 30, 8),
+			(30, 20, 6, 'Gold', '+424254442', 10, 31, 31, 9),
+			(31, 35, 1, 'Diamond', '+357422744', 15, 32, 32, 10),
+			(32, 20, 29, 'Gold', '+424254442', 10, 33, 33, 11),
+			(33, 20, 34, 'Gold', '+424254442', 10, 34, 34, 5),
+			(34, 35, 20, 'Diamond', '+357422744', 15, 35, 35, 7),
+			(35, 35, 17, 'Diamond', '+357422744', 15, 36, 36, 6);
 
 insert into tours values 
 			 (1, 2, 'Shopping Tour', 1),
@@ -198,7 +268,24 @@ insert into tours values
 			 (15, 3,'Mountain Skiing Tour', 15),
 			 (16, 2,'Shopping Tour', 16),
 			 (17, 2,'Traditional Excursion Tour', 17),
-			 (18, 2,'Wedding Tour', 18);
+			 (18, 2,'Wedding Tour', 18),
+			 (19, 3, 'Shopping Tour', 19),
+			 (20, 5, 'Traditional Excursion Tour', 20),
+			 (21, 2, 'Shopping Tour', 21),
+			 (22, 2, 'Mountain Skiing Tour', 22),
+			 (23, 4, 'Wedding Tour', 23),
+			 (24, 5, 'Sport and Extreme Tour', 24),
+			 (25, 3, 'Mountain Skiing Tour', 25),
+			 (26, 3, 'Mountain Skiing Tour', 26),
+			 (27, 4, 'Traditional Excursion Tour', 27),
+			 (28, 5, 'Shopping Tour', 28),
+			 (29, 2, 'Pilgrimage', 29),
+			 (30, 2, 'Sport and Extreme Tour', 30),
+			 (31, 3, 'Traditional Excursion Tour', 31),
+			 (32, 3, 'Mountain Skiing Tour', 32),
+			 (33, 3, 'Traditional Excursion Tour', 33),
+			 (34, 5, 'Traditional Excursion Tour', 34),
+			 (35, 3, 'Pilgrimage', 35);
 
 insert into Bill values
 			(1, 1, 1, 1, 1, 1, 1),
@@ -218,7 +305,24 @@ insert into Bill values
 			(15, 15, 15, 15, 15, 9, 15),
 			(16, 16, 16, 16, 16, 11, 16),
 			(17, 17, 17, 17, 17, 12, 17),
-			(18, 18, 18, 18, 18, 11, 18);
+			(18, 18, 18, 18, 18, 11, 18),
+			(19, 19, 19, 19, 19, 5, 19),
+			(20, 20, 20, 20, 20, 5, 20),
+			(21, 21, 21, 21, 21, 11, 21),
+			(22, 22, 22, 22, 22, 6, 22),
+			(23, 23, 23, 24, 24, 10, 23),
+			(24, 24, 24, 25, 25, 9, 24),
+			(25, 25, 25, 26, 26, 4, 25),
+			(26, 26, 26, 27, 27, 3, 26),
+			(27, 27, 27, 28, 28, 4, 27),
+			(28, 28, 28, 29, 29, 6, 28),
+			(29, 29, 29, 30, 30, 8, 29),
+			(30, 30, 30, 31, 31, 9, 30),
+			(31, 31, 31, 32, 32, 10, 31),
+			(32, 32, 32, 33, 33, 11, 32),
+			(33, 33, 33, 34, 34, 5, 33),
+			(34, 34, 34, 35, 35, 7, 34),
+			(35, 35, 35, 36, 36, 6, 35);
 
 
 
