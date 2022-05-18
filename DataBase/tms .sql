@@ -118,10 +118,10 @@ insert into destination values
 			 (32, 'Moldova', 'Turkey', '7/21/2022', '7/22/2022', 3),
 			 (33, 'Moldova', 'Greece', '4/27/2022', '5/26/2022', 3),
 			 (34, 'Moldova', 'Japan',  '5/6/2022',  '6/9/2022', 3),
-			 (35, 'Roma',    'Orhei',  '5/7/2022',  '5/27/2022', 5),
-			 (36, 'China',	 'Japan',  '5/11/2022', '5/28/2022', 3);
+			 (35, 'Roma',    'Orhei',  '5/7/2022',  '5/27/2022', 5);
+	
 
-iNSERT into customer VALUES
+INSERT into customer VALUES
 			(1,'Ion','Gutu','Lomonosov 2/5','gutuionica@gamail.com',1),
 			(2, 'Chirila ', 'Sasaran ','Str. Pacurari 4A', 'cornea.teea@hotmail.com', 2),
 			(3, 'Paul ', 'Dabija ','P-ta Mircea cel Batrân 5/4', 'ispas.savina@gmail.com', 3),
@@ -144,19 +144,19 @@ iNSERT into customer VALUES
 			(20, 'Iulian','Godur', 'G.Asachi 10/4', 'Godur@gmail.com', 20),
 			(21, 'Ian',   'Gemoroi', 'trada Evreu 21', 'Gemoroi21@gmail.com', 21),
 			(22, 'Clarence', N'Rhodes', 'P. Hasdeu nr. 1B', 'ClarenceIOn@gmail.com', 22),
-			(23, 'Janet', 'Steinke', 'Mircea cel Batrân nr. 0B', 'Steinke33@gmail.com', 24),
-			(24, 'Della', 'Rascon', 'Arhangelul Mihail 5A', 'Rascon2322@gmail.com', 25),
-			(25, 'Debra', 'Green', 'Aleea Decebal nr. 53', 'GrEEn@gmail.com', 26),
-			(26, 'Virginia', 'Pennypacker', 'Calea Frasinului nr. 1/6', 'Pennypacker@gmail.com', 27),
-			(27, 'Demetria', 'Colbert', 'Calea Frunzisului 508', 'Colbert@gmail.com', 28),
-			(28, 'Sharon', 'Austin', 'Aleea Salcâmilor nr. 1', 'Shar0n@gmail.com', 29),
-			(29, 'Elmo', 'Shade', 'Mitropolitul Varlaam nr. 9', '5had6@gmail.com', 30),
-			(30, 'Michael', 'Harper', 'Str Traian nr. 47', '8arp9r@gmail.com', 31),
-			(31, 'Mary', 'Gunter', 'Str. Salcâmilor 0A', '6un7er@gmail.com', 32),
-			(32, 'Daryl', 'Rutz', 'Calea Independentei nr.8A', 'Rut7@gmail.com', 33),
-			(33, 'Ian', 'Anderson', 'Str-la Decebal 4A', '4nders0n@gmail.com', 34),
-			(34, 'Alexandru', 'Macedon', 'Sarmisegetuza12', 'Macedon69@gmail.com', 35),
-			(35, 'Maxim', 'Cioban', 'Alecoruso2/3', 'Ci0ban@gmail.com', 36);
+			(23, 'Janet', 'Steinke', 'Mircea cel Batrân nr. 0B', 'Steinke33@gmail.com', 23),
+			(24, 'Della', 'Rascon', 'Arhangelul Mihail 5A', 'Rascon2322@gmail.com', 24),
+			(25, 'Debra', 'Green', 'Aleea Decebal nr. 53', 'GrEEn@gmail.com', 25),
+			(26, 'Virginia', 'Pennypacker', 'Calea Frasinului nr. 1/6', 'Pennypacker@gmail.com', 26),
+			(27, 'Demetria', 'Colbert', 'Calea Frunzisului 508', 'Colbert@gmail.com', 27),
+			(28, 'Sharon', 'Austin', 'Aleea Salcâmilor nr. 1', 'Shar0n@gmail.com', 28),
+			(29, 'Elmo', 'Shade', 'Mitropolitul Varlaam nr. 9', '5had6@gmail.com', 29),
+			(30, 'Michael', 'Harper', 'Str Traian nr. 47', '8arp9r@gmail.com', 30),
+			(31, 'Mary', 'Gunter', 'Str. Salcâmilor 0A', '6un7er@gmail.com', 31),
+			(32, 'Daryl', 'Rutz', 'Calea Independentei nr.8A', 'Rut7@gmail.com', 32),
+			(33, 'Ian', 'Anderson', 'Str-la Decebal 4A', '4nders0n@gmail.com', 33),
+			(34, 'Alexandru', 'Macedon', 'Sarmisegetuza12', 'Macedon69@gmail.com', 34),
+			(35, 'Maxim', 'Cioban', 'Alecoruso2/3', 'Ci0ban@gmail.com', 35);
 
 
 insert into housing values
@@ -194,8 +194,8 @@ insert into housing values
 			(32,'Turkey','Antalya', 'Akra Hotel', 5, 100),
 			(33,'Greece','Crete', 'Santo Miramare Resort', 5, 80),
 			(34,'Japan', 'Okinawa', 'Sunrise Kanko Hotel', 5, 80),
-			(35,'Orhei', 'Old Orhei', 'Book Vila Elat ', 5, 20),
-			(36,'Japan', 'Kyoto', 'Sunrise Kanko Hotel', 5, 80);
+			(35,'Orhei', 'Old Orhei', 'Book Vila Elat ', 5, 20);
+			
 
 
 
@@ -236,19 +236,19 @@ insert into package values
 			(20, 20, 18, 'Gold', '+424254442', 10, 20, 20, 5),
 			(21, 35, 18, 'Diamond', '+357422744', 15, 21, 21, 11),
 			(22, 20, 8, 'Gold', '+424254442', 10, 22, 22, 6),
-			(23, 10, 14, 'Silver', '+454227442', 5, 24, 24, 10),
-			(24, 20, 16, 'Gold', '+424254442', 10, 25, 25, 9),
-			(25, 20, 2, 'Gold', '+424254442', 10, 26, 26, 4),
-			(26, 20, 2, 'Gold', '+424254442', 10, 27, 27, 3),
-			(27, 35, 14, 'Diamond', '+357422744', 15, 28, 28, 4),
-			(28, 35, 13, 'Diamond', '+357422744', 15, 29, 29, 6),
-			(29, 20, 7, 'Gold', '+424254442', 10, 30, 30, 8),
-			(30, 20, 6, 'Gold', '+424254442', 10, 31, 31, 9),
-			(31, 35, 1, 'Diamond', '+357422744', 15, 32, 32, 10),
-			(32, 20, 29, 'Gold', '+424254442', 10, 33, 33, 11),
-			(33, 20, 34, 'Gold', '+424254442', 10, 34, 34, 5),
-			(34, 35, 20, 'Diamond', '+357422744', 15, 35, 35, 7),
-			(35, 35, 17, 'Diamond', '+357422744', 15, 36, 36, 6);
+			(23, 10, 14, 'Silver', '+454227442', 5, 23, 23, 10),
+			(24, 20, 16, 'Gold', '+424254442', 10, 24, 24, 9),
+			(25, 20, 2, 'Gold', '+424254442', 10, 25, 25, 4),
+			(26, 20, 2, 'Gold', '+424254442', 10, 26, 26, 3),
+			(27, 35, 14, 'Diamond', '+357422744', 15, 27, 27, 4),
+			(28, 35, 13, 'Diamond', '+357422744', 15, 28, 28, 6),
+			(29, 20, 7, 'Gold', '+424254442', 10, 29, 29, 8),
+			(30, 20, 6, 'Gold', '+424254442', 10, 30, 30, 9),
+			(31, 35, 1, 'Diamond', '+357422744', 15, 31, 31, 10),
+			(32, 20, 29, 'Gold', '+424254442', 10, 32, 32, 11),
+			(33, 20, 34, 'Gold', '+424254442', 10, 33, 33, 5),
+			(34, 35, 20, 'Diamond', '+357422744', 15, 34, 34, 7),
+			(35, 35, 17, 'Diamond', '+357422744', 15, 35, 35, 6);
 
 insert into tours values 
 			 (1, 2, 'Shopping Tour', 1),
@@ -287,7 +287,8 @@ insert into tours values
 			 (34, 5, 'Traditional Excursion Tour', 34),
 			 (35, 3, 'Pilgrimage', 35);
 
-insert into Bill values
+insert into Bill 
+values
 			(1, 1, 1, 1, 1, 1, 1),
 			(2, 2, 2, 2, 2, 2, 2),
 			(3, 3, 3, 3, 3, 1, 3),
@@ -310,20 +311,19 @@ insert into Bill values
 			(20, 20, 20, 20, 20, 5, 20),
 			(21, 21, 21, 21, 21, 11, 21),
 			(22, 22, 22, 22, 22, 6, 22),
-			(23, 23, 23, 24, 24, 10, 23),
-			(24, 24, 24, 25, 25, 9, 24),
-			(25, 25, 25, 26, 26, 4, 25),
-			(26, 26, 26, 27, 27, 3, 26),
-			(27, 27, 27, 28, 28, 4, 27),
-			(28, 28, 28, 29, 29, 6, 28),
-			(29, 29, 29, 30, 30, 8, 29),
-			(30, 30, 30, 31, 31, 9, 30),
-			(31, 31, 31, 32, 32, 10, 31),
-			(32, 32, 32, 33, 33, 11, 32),
-			(33, 33, 33, 34, 34, 5, 33),
-			(34, 34, 34, 35, 35, 7, 34),
-			(35, 35, 35, 36, 36, 6, 35);
-
+			(23, 23, 23,23, 23, 10, 23),
+			(24, 24, 24, 24,  24, 9, 24),
+			(25, 25, 25, 25,  25, 4, 25),
+			(26, 26, 26, 26,  26, 3, 26),
+			(27, 27, 27, 27,  27, 4, 27),
+			(28, 28, 28, 28,  28, 6, 28),
+			(29, 29, 29, 29,  29, 8, 29),
+			(30, 30, 30, 30,  30, 9, 30),
+			(31, 31, 31, 31,  31, 10, 31),
+			(32, 32, 32, 32,  32, 11, 32),
+			(33, 33, 33, 33,  33, 5, 33),
+			(34, 34, 34, 34,  34, 7, 34),
+			(35, 35, 35, 35 , 35, 6, 35);
 
 
 
@@ -343,7 +343,7 @@ insert into Bill values
 	AND housing. h_id = Bill.h_id 
 	AND transport.t_id = Bill.t_id
 	AND tours.to_id = Bill.to_id
-	AND housing.h_id = Bill.h_id
+	AND housing.h_id = Bill.h_id 
 	GO
 EXEC SelectAllCustomers;
 
