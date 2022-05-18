@@ -241,14 +241,14 @@ insert into Bill values
 	AND tours.to_id = Bill.to_id
 	AND housing.h_id = Bill.h_id
 	GO
-	EXEC SelectAllCustomers;
+EXEC SelectAllCustomers;
 
 
 
 
 	
-	IF OBJECT_ID('Report_', 'P') IS NOT NULL
-	DROP PROC Report_
+IF OBJECT_ID('Report_', 'P') IS NOT NULL
+DROP PROC Report_
 	GO
 	CREATE PROCEDURE Report_
 	AS
@@ -261,7 +261,7 @@ insert into Bill values
 	AND transport.t_id = Bill.t_id
 	AND tours.to_id = Bill.to_id
 	AND housing.h_id = Bill.h_id
-	GO
+		GO
 	EXEC Report_ 
 
 --Sarcina 2
@@ -345,3 +345,32 @@ SELECT  housing.hname, transport.t_Company
 	select * from destination
 	select * from package
 	select * from tours
+
+--SELECT count(ID_produs) as 'Cantitatea',Denumire_produs FROM Produs GROUP by Denumire_produs
+IF OBJECT_ID('Zile', 'P') IS NOT NULL
+DROP PROC Zile
+	GO
+		CREATE PROCEDURE Zile
+	AS
+		SELECT customer.fname, customer.lname, package.noofdays
+			FROM customer, package, destination, housing, transport, Bill,tours
+			WHERE customer.c_id = Bill.c_id 
+			AND package.p_id = Bill.p_id 
+			AND  destination.d_id = Bill.d_id 
+			AND housing. h_id = Bill.h_id 
+			AND transport.t_id = Bill.t_id   
+			AND tours.to_id = Bill.to_id 
+	GO
+EXEC Zile 
+
+
+
+IF OBJECT_ID('Country', 'P') IS NOT NULL
+DROP PROC Country
+	GO
+		CREATE PROCEDURE Country
+	AS
+SELECT count(destination.d_id) as 'Values',to_ as 'Country' FROM destination GROUP by to_
+	GO
+EXEC Country 
+

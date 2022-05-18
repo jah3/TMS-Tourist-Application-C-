@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="TurismModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="TurismEntities" annotation:LazyLoadingEnabled="true">
+    <FunctionImport Name="Diagrama" ReturnType="Collection(TurismModel.Diagrama_Result)" />
+  </EntityContainer>
+  <ComplexType Name="Diagrama_Result">
+    <Property Type="Int32" Name="Most_Visited" Nullable="true" />
+    <Property Type="String" Name="Country" Nullable="true" MaxLength="255" />
+  </ComplexType>
+</Schema>

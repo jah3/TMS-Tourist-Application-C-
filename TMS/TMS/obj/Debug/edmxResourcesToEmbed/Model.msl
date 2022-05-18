@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="TurismModelStoreContainer" CdmEntityContainer="TurismEntities">
+    <FunctionImportMapping FunctionImportName="Diagrama" FunctionName="TurismModel.Store.Diagrama">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="TurismModel.Diagrama_Result">
+          <ScalarProperty Name="Most_Visited" ColumnName="Most Visited" />
+          <ScalarProperty Name="Country" ColumnName="Country" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>

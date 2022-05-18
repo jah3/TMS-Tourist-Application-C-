@@ -13,9 +13,13 @@ namespace TMS
 {
     public partial class Expanded_Information : Form
     {
+        public static string usernamedata ="";
+        public static string passworddata = "";
+
         public Expanded_Information()
         {
             InitializeComponent();
+           
         }
 
         private void Close_Click(object sender, EventArgs e)
@@ -34,6 +38,9 @@ namespace TMS
             string username = bunifuTextBox3.Text;
 
             string password = bunifuTextBox2.Text;
+
+            usernamedata = bunifuTextBox3.Text;
+            passworddata = bunifuTextBox2.Text;
 
             using (var sha = new System.Security.Cryptography.SHA256Managed())
             {

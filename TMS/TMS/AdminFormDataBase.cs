@@ -16,18 +16,24 @@ namespace TMS
     {
         SqlConnection con = new SqlConnection(@"Data Source=localhost;Initial Catalog=Turism;Integrated Security=True");
         public int customer_id = 0;
+      
+
         public AdminFormDataBase()
         {
-            
             InitializeComponent();
             displaycustomer_data();
             loadTypes();
+
+            if (Expanded_Information.usernamedata == "admin" && Expanded_Information.passworddata == "admin1")
+            {
+                destination_btn.Visible = true;
+            }
+            else { }
         }
         void loadTypes()
         {
             foreach (var line in System.IO.File.ReadAllLines(@"types\types.txt"))
             {
-
                 tourstype.Items.Add(line);
                 bunifuDropdown1.Items.Add(line);
             }
@@ -448,6 +454,7 @@ namespace TMS
                 cmd.ExecuteNonQuery();
                 con.Close();
                 //refresh();
+                MessageBox.Show("User added successfully! ", "Information 📋");
             }
             void refresh()
             {
@@ -498,13 +505,13 @@ namespace TMS
             SqlCommand cmd = con.CreateCommand();
             cmd.CommandType = CommandType.Text;
             cmd.CommandText = (
-           "  SELECT customer.fname,package.noofdays,housing.hlocation " +
-" FROM customer, package,housing, Bill " +
-"  WHERE customer.c_id = Bill.c_id " +
-" AND package.p_id = Bill.p_id " +
-" AND housing. h_id = Bill.h_id " +
-" And package.noofdays like '" + bunifuTextBox4.Text + "'" +
-" And housing.hlocation like '" + bunifuDropdown3.Text + "'");
+                               "  SELECT customer.fname,package.noofdays,housing.hlocation " +
+                                " FROM customer, package,housing, Bill " +
+                                "  WHERE customer.c_id = Bill.c_id " +
+                                " AND package.p_id = Bill.p_id " +
+                                " AND housing. h_id = Bill.h_id " +
+                                " And package.noofdays like '" + bunifuTextBox4.Text + "'" +
+                                " And housing.hlocation like '" + bunifuDropdown3.Text + "'");
 
 
             cmd.ExecuteNonQuery();
@@ -515,6 +522,5 @@ namespace TMS
             con.Close();
         }
 
-  
     }
 }

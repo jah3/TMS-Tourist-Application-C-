@@ -31,7 +31,7 @@ namespace TMS
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ReportFORM));
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties1 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties3 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
@@ -42,6 +42,12 @@ namespace TMS
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties8 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Utilities.BunifuPages.BunifuAnimatorNS.Animation animation1 = new Utilities.BunifuPages.BunifuAnimatorNS.Animation();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.Report_BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.TurismDataSet23 = new TMS.TurismDataSet23();
             this.bunifuShadowPanel2 = new Bunifu.UI.WinForms.BunifuShadowPanel();
@@ -59,11 +65,21 @@ namespace TMS
             this.bunifuLabel9 = new Bunifu.UI.WinForms.BunifuLabel();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.TurismDataSet24 = new TMS.TurismDataSet24();
+            this.ChartDia = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
+            this.bunifuPages1 = new Bunifu.UI.WinForms.BunifuPages();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.Bill = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
+            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             ((System.ComponentModel.ISupportInitialize)(this.Report_BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TurismDataSet23)).BeginInit();
             this.bunifuShadowPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TurismDataSet24)).BeginInit();
+            this.bunifuPages1.SuspendLayout();
+            this.tabPage1.SuspendLayout();
+            this.tabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.SuspendLayout();
             // 
             // Report_BindingSource
@@ -212,11 +228,11 @@ namespace TMS
             this.Search_btn.ColorContrastOnClick = 45;
             this.Search_btn.ColorContrastOnHover = 45;
             this.Search_btn.Cursor = System.Windows.Forms.Cursors.Hand;
-            borderEdges1.BottomLeft = true;
-            borderEdges1.BottomRight = true;
-            borderEdges1.TopLeft = true;
-            borderEdges1.TopRight = true;
-            this.Search_btn.CustomizableEdges = borderEdges1;
+            borderEdges3.BottomLeft = true;
+            borderEdges3.BottomRight = true;
+            borderEdges3.TopLeft = true;
+            borderEdges3.TopRight = true;
+            this.Search_btn.CustomizableEdges = borderEdges3;
             this.Search_btn.DialogResult = System.Windows.Forms.DialogResult.None;
             this.Search_btn.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(189)))), ((int)(((byte)(199)))));
             this.Search_btn.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(189)))), ((int)(((byte)(199)))));
@@ -240,7 +256,7 @@ namespace TMS
             this.Search_btn.IdleIconLeftImage = null;
             this.Search_btn.IdleIconRightImage = null;
             this.Search_btn.IndicateFocus = false;
-            this.Search_btn.Location = new System.Drawing.Point(319, 575);
+            this.Search_btn.Location = new System.Drawing.Point(319, 187);
             this.Search_btn.Name = "Search_btn";
             this.Search_btn.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(189)))), ((int)(((byte)(199)))));
             this.Search_btn.OnDisabledState.BorderRadius = 25;
@@ -471,10 +487,10 @@ namespace TMS
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource2);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "TMS.Raport.rdlc";
-            this.reportViewer1.Location = new System.Drawing.Point(499, 63);
+            this.reportViewer1.Location = new System.Drawing.Point(3, 6);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(634, 551);
+            this.reportViewer1.Size = new System.Drawing.Size(634, 580);
             this.reportViewer1.TabIndex = 28;
             // 
             // TurismDataSet24
@@ -482,12 +498,268 @@ namespace TMS
             this.TurismDataSet24.DataSetName = "TurismDataSet24";
             this.TurismDataSet24.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
+            // ChartDia
+            // 
+            this.ChartDia.AllowAnimations = true;
+            this.ChartDia.AllowMouseEffects = true;
+            this.ChartDia.AllowToggling = false;
+            this.ChartDia.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.ChartDia.AnimationSpeed = 200;
+            this.ChartDia.AutoGenerateColors = false;
+            this.ChartDia.AutoRoundBorders = false;
+            this.ChartDia.AutoSizeLeftIcon = true;
+            this.ChartDia.AutoSizeRightIcon = true;
+            this.ChartDia.BackColor = System.Drawing.Color.Transparent;
+            this.ChartDia.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(189)))), ((int)(((byte)(199)))));
+            this.ChartDia.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ChartDia.BackgroundImage")));
+            this.ChartDia.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.ChartDia.ButtonText = "Diagram";
+            this.ChartDia.ButtonTextMarginLeft = 0;
+            this.ChartDia.ColorContrastOnClick = 45;
+            this.ChartDia.ColorContrastOnHover = 45;
+            this.ChartDia.Cursor = System.Windows.Forms.Cursors.Hand;
+            borderEdges2.BottomLeft = true;
+            borderEdges2.BottomRight = true;
+            borderEdges2.TopLeft = true;
+            borderEdges2.TopRight = true;
+            this.ChartDia.CustomizableEdges = borderEdges2;
+            this.ChartDia.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.ChartDia.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(189)))), ((int)(((byte)(199)))));
+            this.ChartDia.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(189)))), ((int)(((byte)(199)))));
+            this.ChartDia.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.ChartDia.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
+            this.ChartDia.Font = new System.Drawing.Font("Galey SemBd", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ChartDia.ForeColor = System.Drawing.Color.White;
+            this.ChartDia.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ChartDia.IconLeftCursor = System.Windows.Forms.Cursors.Default;
+            this.ChartDia.IconLeftPadding = new System.Windows.Forms.Padding(11, 3, 3, 3);
+            this.ChartDia.IconMarginLeft = 11;
+            this.ChartDia.IconPadding = 10;
+            this.ChartDia.IconRightAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.ChartDia.IconRightCursor = System.Windows.Forms.Cursors.Default;
+            this.ChartDia.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
+            this.ChartDia.IconSize = 25;
+            this.ChartDia.IdleBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(189)))), ((int)(((byte)(199)))));
+            this.ChartDia.IdleBorderRadius = 25;
+            this.ChartDia.IdleBorderThickness = 1;
+            this.ChartDia.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(189)))), ((int)(((byte)(199)))));
+            this.ChartDia.IdleIconLeftImage = null;
+            this.ChartDia.IdleIconRightImage = null;
+            this.ChartDia.IndicateFocus = false;
+            this.ChartDia.Location = new System.Drawing.Point(319, 564);
+            this.ChartDia.Name = "ChartDia";
+            this.ChartDia.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(189)))), ((int)(((byte)(199)))));
+            this.ChartDia.OnDisabledState.BorderRadius = 25;
+            this.ChartDia.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.ChartDia.OnDisabledState.BorderThickness = 1;
+            this.ChartDia.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(189)))), ((int)(((byte)(199)))));
+            this.ChartDia.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.ChartDia.OnDisabledState.IconLeftImage = null;
+            this.ChartDia.OnDisabledState.IconRightImage = null;
+            this.ChartDia.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.ChartDia.onHoverState.BorderRadius = 25;
+            this.ChartDia.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.ChartDia.onHoverState.BorderThickness = 1;
+            this.ChartDia.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.ChartDia.onHoverState.ForeColor = System.Drawing.Color.White;
+            this.ChartDia.onHoverState.IconLeftImage = null;
+            this.ChartDia.onHoverState.IconRightImage = null;
+            this.ChartDia.OnIdleState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(189)))), ((int)(((byte)(199)))));
+            this.ChartDia.OnIdleState.BorderRadius = 25;
+            this.ChartDia.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.ChartDia.OnIdleState.BorderThickness = 1;
+            this.ChartDia.OnIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(189)))), ((int)(((byte)(199)))));
+            this.ChartDia.OnIdleState.ForeColor = System.Drawing.Color.White;
+            this.ChartDia.OnIdleState.IconLeftImage = null;
+            this.ChartDia.OnIdleState.IconRightImage = null;
+            this.ChartDia.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.ChartDia.OnPressedState.BorderRadius = 25;
+            this.ChartDia.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.ChartDia.OnPressedState.BorderThickness = 1;
+            this.ChartDia.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.ChartDia.OnPressedState.ForeColor = System.Drawing.Color.White;
+            this.ChartDia.OnPressedState.IconLeftImage = null;
+            this.ChartDia.OnPressedState.IconRightImage = null;
+            this.ChartDia.Size = new System.Drawing.Size(113, 39);
+            this.ChartDia.TabIndex = 29;
+            this.ChartDia.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.ChartDia.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
+            this.ChartDia.TextMarginLeft = 0;
+            this.ChartDia.TextPadding = new System.Windows.Forms.Padding(0);
+            this.ChartDia.UseDefaultRadiusAndThickness = true;
+            this.ChartDia.Click += new System.EventHandler(this.ChartDia_Click);
+            // 
+            // bunifuPages1
+            // 
+            this.bunifuPages1.Alignment = System.Windows.Forms.TabAlignment.Bottom;
+            this.bunifuPages1.AllowTransitions = true;
+            this.bunifuPages1.Controls.Add(this.tabPage1);
+            this.bunifuPages1.Controls.Add(this.tabPage2);
+            this.bunifuPages1.Location = new System.Drawing.Point(467, 52);
+            this.bunifuPages1.Multiline = true;
+            this.bunifuPages1.Name = "bunifuPages1";
+            this.bunifuPages1.Page = this.tabPage2;
+            this.bunifuPages1.PageIndex = 1;
+            this.bunifuPages1.PageName = "tabPage2";
+            this.bunifuPages1.PageTitle = "tabPage2";
+            this.bunifuPages1.SelectedIndex = 0;
+            this.bunifuPages1.Size = new System.Drawing.Size(644, 573);
+            this.bunifuPages1.TabIndex = 30;
+            animation1.AnimateOnlyDifferences = false;
+            animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
+            animation1.LeafCoeff = 0F;
+            animation1.MaxTime = 1F;
+            animation1.MinTime = 0F;
+            animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
+            animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
+            animation1.MosaicSize = 0;
+            animation1.Padding = new System.Windows.Forms.Padding(0, 0, 0, 0);
+            animation1.RotateCoeff = 0F;
+            animation1.RotateLimit = 0F;
+            animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
+            animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
+            animation1.TimeCoeff = 0F;
+            animation1.TransparencyCoeff = 0F;
+            this.bunifuPages1.Transition = animation1;
+            this.bunifuPages1.TransitionType = Utilities.BunifuPages.BunifuAnimatorNS.AnimationType.Custom;
+            // 
+            // tabPage1
+            // 
+            this.tabPage1.Controls.Add(this.reportViewer1);
+            this.tabPage1.Location = new System.Drawing.Point(4, 4);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(636, 547);
+            this.tabPage1.TabIndex = 0;
+            this.tabPage1.Text = "tabPage1";
+            this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Controls.Add(this.chart1);
+            this.tabPage2.Location = new System.Drawing.Point(4, 4);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(636, 547);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "tabPage2";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // Bill
+            // 
+            this.Bill.AllowAnimations = true;
+            this.Bill.AllowMouseEffects = true;
+            this.Bill.AllowToggling = false;
+            this.Bill.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.Bill.AnimationSpeed = 200;
+            this.Bill.AutoGenerateColors = false;
+            this.Bill.AutoRoundBorders = false;
+            this.Bill.AutoSizeLeftIcon = true;
+            this.Bill.AutoSizeRightIcon = true;
+            this.Bill.BackColor = System.Drawing.Color.Transparent;
+            this.Bill.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(189)))), ((int)(((byte)(199)))));
+            this.Bill.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Bill.BackgroundImage")));
+            this.Bill.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.Bill.ButtonText = "Bill";
+            this.Bill.ButtonTextMarginLeft = 0;
+            this.Bill.ColorContrastOnClick = 45;
+            this.Bill.ColorContrastOnHover = 45;
+            this.Bill.Cursor = System.Windows.Forms.Cursors.Hand;
+            borderEdges1.BottomLeft = true;
+            borderEdges1.BottomRight = true;
+            borderEdges1.TopLeft = true;
+            borderEdges1.TopRight = true;
+            this.Bill.CustomizableEdges = borderEdges1;
+            this.Bill.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.Bill.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(189)))), ((int)(((byte)(199)))));
+            this.Bill.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(189)))), ((int)(((byte)(199)))));
+            this.Bill.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.Bill.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
+            this.Bill.Font = new System.Drawing.Font("Galey SemBd", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Bill.ForeColor = System.Drawing.Color.White;
+            this.Bill.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Bill.IconLeftCursor = System.Windows.Forms.Cursors.Default;
+            this.Bill.IconLeftPadding = new System.Windows.Forms.Padding(11, 3, 3, 3);
+            this.Bill.IconMarginLeft = 11;
+            this.Bill.IconPadding = 10;
+            this.Bill.IconRightAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.Bill.IconRightCursor = System.Windows.Forms.Cursors.Default;
+            this.Bill.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
+            this.Bill.IconSize = 25;
+            this.Bill.IdleBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(189)))), ((int)(((byte)(199)))));
+            this.Bill.IdleBorderRadius = 25;
+            this.Bill.IdleBorderThickness = 1;
+            this.Bill.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(189)))), ((int)(((byte)(199)))));
+            this.Bill.IdleIconLeftImage = null;
+            this.Bill.IdleIconRightImage = null;
+            this.Bill.IndicateFocus = false;
+            this.Bill.Location = new System.Drawing.Point(12, 564);
+            this.Bill.Name = "Bill";
+            this.Bill.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(189)))), ((int)(((byte)(199)))));
+            this.Bill.OnDisabledState.BorderRadius = 25;
+            this.Bill.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.Bill.OnDisabledState.BorderThickness = 1;
+            this.Bill.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(189)))), ((int)(((byte)(199)))));
+            this.Bill.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.Bill.OnDisabledState.IconLeftImage = null;
+            this.Bill.OnDisabledState.IconRightImage = null;
+            this.Bill.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.Bill.onHoverState.BorderRadius = 25;
+            this.Bill.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.Bill.onHoverState.BorderThickness = 1;
+            this.Bill.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.Bill.onHoverState.ForeColor = System.Drawing.Color.White;
+            this.Bill.onHoverState.IconLeftImage = null;
+            this.Bill.onHoverState.IconRightImage = null;
+            this.Bill.OnIdleState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(189)))), ((int)(((byte)(199)))));
+            this.Bill.OnIdleState.BorderRadius = 25;
+            this.Bill.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.Bill.OnIdleState.BorderThickness = 1;
+            this.Bill.OnIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(189)))), ((int)(((byte)(199)))));
+            this.Bill.OnIdleState.ForeColor = System.Drawing.Color.White;
+            this.Bill.OnIdleState.IconLeftImage = null;
+            this.Bill.OnIdleState.IconRightImage = null;
+            this.Bill.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.Bill.OnPressedState.BorderRadius = 25;
+            this.Bill.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.Bill.OnPressedState.BorderThickness = 1;
+            this.Bill.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.Bill.OnPressedState.ForeColor = System.Drawing.Color.White;
+            this.Bill.OnPressedState.IconLeftImage = null;
+            this.Bill.OnPressedState.IconRightImage = null;
+            this.Bill.Size = new System.Drawing.Size(113, 39);
+            this.Bill.TabIndex = 31;
+            this.Bill.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Bill.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Bill.TextMarginLeft = 0;
+            this.Bill.TextPadding = new System.Windows.Forms.Padding(0);
+            this.Bill.UseDefaultRadiusAndThickness = true;
+            this.Bill.Click += new System.EventHandler(this.Bill_Click);
+            // 
+            // chart1
+            // 
+            chartArea1.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chart1.Legends.Add(legend1);
+            this.chart1.Location = new System.Drawing.Point(6, 68);
+            this.chart1.Name = "chart1";
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Country";
+            this.chart1.Series.Add(series1);
+            this.chart1.Size = new System.Drawing.Size(616, 300);
+            this.chart1.TabIndex = 0;
+            this.chart1.Text = "chart1";
+            // 
             // ReportFORM
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1145, 626);
-            this.Controls.Add(this.reportViewer1);
+            this.Controls.Add(this.Bill);
+            this.Controls.Add(this.bunifuPages1);
+            this.Controls.Add(this.ChartDia);
             this.Controls.Add(this.bunifuLabel8);
             this.Controls.Add(this.name);
             this.Controls.Add(this.lname);
@@ -505,6 +777,10 @@ namespace TMS
             this.bunifuShadowPanel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TurismDataSet24)).EndInit();
+            this.bunifuPages1.ResumeLayout(false);
+            this.tabPage1.ResumeLayout(false);
+            this.tabPage2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -529,5 +805,11 @@ namespace TMS
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel9;
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
         private TurismDataSet24 TurismDataSet24;
+        private Bunifu.UI.WinForms.BunifuButton.BunifuButton ChartDia;
+        private Bunifu.UI.WinForms.BunifuButton.BunifuButton Bill;
+        private Bunifu.UI.WinForms.BunifuPages bunifuPages1;
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
     }
 }
