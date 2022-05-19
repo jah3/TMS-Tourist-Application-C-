@@ -21,6 +21,7 @@ namespace TMS
         public int c_id, p_id, d_id, h_id, t_id, to_id;
         public int cost = 0;
         public int discount = 0;
+        public static string theme_status = "";
         private void Form1_Load(object sender, EventArgs e)
         {
 
@@ -28,16 +29,153 @@ namespace TMS
 
         public Form1()
         {
-
             InitializeComponent();
             loadTypes();
+            this.bunifuPictureBox4.Image = Properties.Resources.mars;
         }
+
+        public void theme()
+        {
+            if (bunifuToggleSwitch1.Checked == true)
+            {//dark theme  255, 61, 72
+                theme_status = "dark";
+                //Form1
+                bunifuButton2.IdleBorderColor = Color.FromArgb(255, 61, 72);
+                bunifuButton2.IdleFillColor = Color.FromArgb(255, 61, 72);
+                bunifuButton2.OnPressedState.FillColor = Color.FromArgb(255, 61, 72);
+                bunifuButton2.OnPressedState.BorderColor = Color.FromArgb(255, 61, 72);
+
+                submitbutton.IdleBorderColor = Color.FromArgb(255, 61, 72);
+                submitbutton.IdleFillColor = Color.FromArgb(255, 61, 72);
+                submitbutton.OnPressedState.FillColor = Color.FromArgb(255, 61, 72);
+                submitbutton.OnPressedState.BorderColor = Color.FromArgb(255, 61, 72);
+
+                Search.IdleBorderColor = Color.FromArgb(255, 61, 72);
+                Search.IdleFillColor = Color.FromArgb(255, 61, 72);
+                Search.OnPressedState.FillColor = Color.FromArgb(255, 61, 72);
+                Search.OnPressedState.BorderColor = Color.FromArgb(255, 61, 72);
+
+                bunifuButton1.IdleBorderColor = Color.FromArgb(255, 61, 72);
+                bunifuButton1.IdleFillColor = Color.FromArgb(255, 61, 72);
+                bunifuButton1.OnPressedState.FillColor = Color.FromArgb(255, 61, 72);
+                bunifuButton1.OnPressedState.BorderColor = Color.FromArgb(255, 61, 72);
+
+                bunifuShadowPanel1.PanelColor = Color.FromArgb(56, 57, 59);
+                bunifuShadowPanel1.PanelColor2 = Color.FromArgb(56, 57, 59);
+                bunifuShadowPanel1.BorderColor = Color.FromArgb(56, 57, 59);
+                bunifuShadowPanel1.ShadowColor = Color.FromArgb(28, 28, 28);
+
+                bunifuLabel2.ForeColor = Color.FromArgb(237, 237, 237);
+                tour.ForeColor = Color.FromArgb(237, 237, 237);
+                retour.ForeColor = Color.FromArgb(237, 237, 237);
+
+                this.bunifuPictureBox4.Image = Properties.Resources.moon;
+                tabPage7.BackColor = Color.FromArgb(34, 35, 36);
+                tabPage8.BackColor = Color.FromArgb(34, 35, 36);
+                tabPage9.BackColor = Color.FromArgb(56, 57, 59);
+                bunifuShadowPanel2.BackColor = Color.FromArgb(56, 57, 59);
+                bunifuShadowPanel2.PanelColor = Color.FromArgb(56, 57, 59);
+                bunifuShadowPanel2.PanelColor2 = Color.FromArgb(56, 57, 59);
+                bunifuShadowPanel2.BorderColor = Color.FromArgb(28, 28, 28);
+
+                bunifuShadowPanel6.BackColor = Color.FromArgb(56, 57, 59);
+                bunifuShadowPanel6.PanelColor = Color.FromArgb(56, 57, 59);
+                bunifuShadowPanel6.PanelColor2 = Color.FromArgb(56, 57, 59);
+                bunifuShadowPanel6.BorderColor = Color.FromArgb(28, 28, 28);
+
+                tabPage1.BackColor = Color.FromArgb(56, 57, 59);
+                tabPage2.BackColor = Color.FromArgb(56, 57, 59);
+                tabPage3.BackColor = Color.FromArgb(56, 57, 59);
+                tabPage4.BackColor = Color.FromArgb(56, 57, 59);
+                tabPage5.BackColor = Color.FromArgb(56, 57, 59);
+                tabPage6.BackColor = Color.FromArgb(56, 57, 59);
+                tabPage13.BackColor = Color.FromArgb(56, 57, 59);
+                tabPage15.BackColor = Color.FromArgb(56, 57, 59);
+                tabPage12.BackColor = Color.FromArgb(56, 57, 59);
+                tabPage14.BackColor = Color.FromArgb(56, 57, 59);
+                tabPage16.BackColor = Color.FromArgb(56, 57, 59);
+                tabPage17.BackColor = Color.FromArgb(56, 57, 59);
+
+                this.BackColor = Color.FromArgb(34, 35, 36);
+            }
+            else if(bunifuToggleSwitch1.Checked == false)
+            {//white theme  
+                theme_status = "white";
+                //Form1
+                bunifuButton2.IdleBorderColor = Color.FromArgb(189, 189, 199);
+                bunifuButton2.IdleFillColor = Color.FromArgb(189, 189, 199);
+                bunifuButton2.OnPressedState.FillColor = Color.FromArgb(80, 80, 80);
+                bunifuButton2.OnPressedState.BorderColor = Color.FromArgb(80, 80, 80);
+
+                submitbutton.IdleBorderColor = Color.FromArgb(189, 189, 199);
+                submitbutton.IdleFillColor = Color.FromArgb(189, 189, 199);
+                submitbutton.OnPressedState.FillColor = Color.FromArgb(80, 80, 80);
+                submitbutton.OnPressedState.BorderColor = Color.FromArgb(80, 80, 80);
+
+                Search.onHoverState.FillColor = Color.FromArgb(80, 80, 80);
+                Search.OnPressedState.BorderColor = Color.FromArgb(80, 80, 80);
+
+                bunifuButton1.IdleBorderColor = Color.FromArgb(189, 189, 199);
+                bunifuButton1.IdleFillColor = Color.FromArgb(189, 189, 199);
+                bunifuButton1.OnPressedState.FillColor = Color.FromArgb(80, 80, 80);
+                bunifuButton1.OnPressedState.BorderColor = Color.FromArgb(80, 80, 80);
+
+
+                bunifuShadowPanel1.PanelColor = Color.WhiteSmoke;
+                bunifuShadowPanel1.PanelColor2 = Color.WhiteSmoke;
+                bunifuShadowPanel1.BorderColor = Color.WhiteSmoke;
+                bunifuShadowPanel1.ShadowColor = Color.DarkGray;
+
+                Search.IdleBorderColor = Color.FromArgb(189, 189, 199);
+                Search.IdleFillColor = Color.FromArgb(189, 189, 199);
+
+                tour.ForeColor = Color.Black;
+                retour.ForeColor = Color.Black;
+                bunifuLabel2.ForeColor = Color.FromArgb(80, 80, 80);
+
+                this.bunifuPictureBox4.Image = Properties.Resources.mars;
+                tabPage7.BackColor = Color.FromArgb(227, 227, 225);
+                tabPage8.BackColor = Color.FromArgb(227, 227, 225);
+                tabPage9.BackColor = Color.Transparent;
+                bunifuShadowPanel2.BackColor = Color.Transparent;
+                bunifuShadowPanel2.PanelColor = Color.WhiteSmoke;
+                bunifuShadowPanel2.PanelColor2 = Color.WhiteSmoke;
+                bunifuShadowPanel2.BorderColor = Color.WhiteSmoke;
+
+                bunifuShadowPanel6.BackColor = Color.Transparent;
+                bunifuShadowPanel6.PanelColor = Color.WhiteSmoke;
+                bunifuShadowPanel6.PanelColor2 = Color.WhiteSmoke;
+                bunifuShadowPanel6.BorderColor = Color.WhiteSmoke;
+
+                tabPage1.BackColor = Color.WhiteSmoke;
+                tabPage2.BackColor = Color.WhiteSmoke;
+                tabPage3.BackColor = Color.WhiteSmoke;
+                tabPage4.BackColor = Color.WhiteSmoke;
+                tabPage5.BackColor = Color.WhiteSmoke;
+                tabPage6.BackColor = Color.WhiteSmoke;
+                tabPage13.BackColor = Color.WhiteSmoke;
+                tabPage15.BackColor = Color.WhiteSmoke;
+                tabPage12.BackColor = Color.WhiteSmoke;
+                tabPage14.BackColor = Color.WhiteSmoke;
+                tabPage16.BackColor = Color.WhiteSmoke;
+                tabPage17.BackColor = Color.WhiteSmoke;
+
+                this.BackColor = Color.FromArgb(227, 227, 225);
+            }
+        }
+
+        private void bunifuToggleSwitch1_CheckedChanged(object sender, Bunifu.UI.WinForms.BunifuToggleSwitch.CheckedChangedEventArgs e)
+        {
+            theme();
+        }
+
         void loadTypes()
         {
             foreach (var line in System.IO.File.ReadAllLines(@"types\types.txt"))
             {
                 tourstype.Items.Add(line);
             }
+          
         }
         private void package_SelectedIndexChanged(object sender, EventArgs e)
 
@@ -130,6 +268,7 @@ namespace TMS
            
         }
 
+
         private void bunifuPanel1_Click(object sender, EventArgs e)
         {
         }
@@ -156,9 +295,10 @@ namespace TMS
 
         private void bunifuLabel2_Click(object sender, EventArgs e)
         {
-            Expanded_Information exp = new Expanded_Information();
-            this.Hide();
-            exp.Show();
+                Expanded_Information exp = new Expanded_Information();
+                this.Hide();
+                exp.Show();
+
         }
 
         private void bunifuShadowPanel3_ControlAdded(object sender, ControlEventArgs e)

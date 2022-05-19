@@ -18,11 +18,6 @@ CREATE TABLE destination
 	tour varchar(255),
 	retour varchar(255), 
 	seats int);
-
-
-
-
-	
 CREATE TABLE customer
 	(c_id int  PRIMARY KEY, 
 	fname varchar(255),
@@ -30,8 +25,6 @@ CREATE TABLE customer
 	address_ varchar(255),
 	email varchar(255),
 	d_id int FOREIGN KEY REFERENCES destination(d_id));
-
-
 CREATE TABLE housing
 	(h_id int PRIMARY KEY,
 	country varchar(255),
@@ -39,12 +32,10 @@ CREATE TABLE housing
 	hname varchar(255),
 	hrating int,
 	price int);
-
 CREATE TABLE transport
 	(t_id int primary key,
 	t_Company varchar(255),
 	t_cost int);
-
 CREATE TABLE package
 	(p_id int  PRIMARY KEY,
 	cost int, 
@@ -55,17 +46,11 @@ CREATE TABLE package
 	d_id int FOREIGN KEY REFERENCES destination(d_id),
 	h_id int FOREIGN KEY REFERENCES housing(h_id),
 	t_id int FOREIGN KEY REFERENCES transport(t_id));
-
-
-
 CREATE TABLE tours
 	(to_id int  PRIMARY KEY, 
 	seats int, 
 	types_ varchar(255), 
 	p_id int FOREIGN KEY REFERENCES package(p_id));
-
-
-
 CREATE TABLE Bill
 	 (b_id int PRIMARY KEY,
 	 c_id int FOREIGN KEY REFERENCES customer(c_id),
@@ -74,10 +59,6 @@ CREATE TABLE Bill
 	 h_id int FOREIGN KEY REFERENCES housing(h_id),
 	 t_id int FOREIGN KEY REFERENCES transport(t_id),
 	 to_id int FOREIGN KEY REFERENCES tours(to_id));
-
-
-
-
 -------------------------------------------------------------------------------------------------------------------------------------
 --|																																	|
 --|														INSERT													    				|
@@ -119,8 +100,6 @@ insert into destination values
 			 (33, 'Moldova', 'Greece', '4/27/2022', '5/26/2022', 3),
 			 (34, 'Moldova', 'Japan',  '5/6/2022',  '6/9/2022', 3),
 			 (35, 'Roma',    'Orhei',  '5/7/2022',  '5/27/2022', 5);
-	
-
 INSERT into customer VALUES
 			(1,'Ion','Gutu','Lomonosov 2/5','gutuionica@gamail.com',1),
 			(2, 'Chirila ', 'Sasaran ','Str. Pacurari 4A', 'cornea.teea@hotmail.com', 2),
@@ -157,8 +136,6 @@ INSERT into customer VALUES
 			(33, 'Ian', 'Anderson', 'Str-la Decebal 4A', '4nders0n@gmail.com', 33),
 			(34, 'Alexandru', 'Macedon', 'Sarmisegetuza12', 'Macedon69@gmail.com', 34),
 			(35, 'Maxim', 'Cioban', 'Alecoruso2/3', 'Ci0ban@gmail.com', 35);
-
-
 insert into housing values
 			(1,  'Denmark', 'Odense', 'Cabinn Copenhagen', 3, 80),
 			(2,  'Denmark', 'Arhus', 'Borgergade', 2, 70),
@@ -195,10 +172,6 @@ insert into housing values
 			(33,'Greece','Crete', 'Santo Miramare Resort', 5, 80),
 			(34,'Japan', 'Okinawa', 'Sunrise Kanko Hotel', 5, 80),
 			(35,'Orhei', 'Old Orhei', 'Book Vila Elat ', 5, 20);
-			
-
-
-
 insert into transport values
 			(1, 'Danish Air Flybilletter', 470),
 			(2, 'Denmark Bus: Havnbus', 300),
@@ -212,7 +185,6 @@ insert into transport values
 			(10,'Multiple Airlines', 350),
 			(11,'Airline:Ryanair', 500),
 			(12,'Airline:easyJet', 555);
-
 insert into package values
 			(1, 10, 16, 'Silver', '+454227442', 5, 1, 1, 1),
 			(2, 20, 16, 'Gold',   '+424254442', 10, 2, 2, 2),
@@ -249,7 +221,6 @@ insert into package values
 			(33, 20, 34, 'Gold', '+424254442', 10, 33, 33, 5),
 			(34, 35, 20, 'Diamond', '+357422744', 15, 34, 34, 7),
 			(35, 35, 17, 'Diamond', '+357422744', 15, 35, 35, 6);
-
 insert into tours values 
 			 (1, 2, 'Shopping Tour', 1),
 			 (2, 2, 'Mountain Skiing Tour', 2),
@@ -286,7 +257,6 @@ insert into tours values
 			 (33, 3, 'Traditional Excursion Tour', 33),
 			 (34, 5, 'Traditional Excursion Tour', 34),
 			 (35, 3, 'Pilgrimage', 35);
-
 insert into Bill 
 values
 			(1, 1, 1, 1, 1, 1, 1),
@@ -324,13 +294,14 @@ values
 			(33, 33, 33, 33,  33, 5, 33),
 			(34, 34, 34, 34,  34, 7, 34),
 			(35, 35, 35, 35 , 35, 6, 35);
+-------------------------------------------------------------------------------------------------------------------------------------
+--|																																	|
+--|														Procedure													    			|
+--|																										 							|
+-------------------------------------------------------------------------------------------------------------------------------------
 
 
-
-
-
-
-	IF OBJECT_ID('SelectAllCustomers', 'P') IS NOT NULL
+IF OBJECT_ID('SelectAllCustomers', 'P') IS NOT NULL
 	DROP PROC SelectAllCustomers
 	GO
 	CREATE PROCEDURE SelectAllCustomers
@@ -354,7 +325,7 @@ EXEC SelectAllCustomers;
 IF OBJECT_ID('Report_', 'P') IS NOT NULL
 DROP PROC Report_
 	GO
-	CREATE PROCEDURE Report_
+CREATE PROCEDURE Report_
 	AS
 	SELECT customer.c_id, customer.fname, customer.lname,  package.packagetype, destination.where_,destination.to_,destination.tour, destination.retour, housing.hlocation, housing.hname  , tours.types_ ,transport.t_Company,  (housing.price + transport.t_cost + package.cost) AS Price_total,(housing.price + transport.t_cost + package.cost)-  (package.discount/100) * (housing.price + transport.t_cost + package.cost)  AS Pret_Cu_Reducere
 	FROM customer, package, destination, housing, transport, Bill,tours
@@ -366,7 +337,7 @@ DROP PROC Report_
 	AND tours.to_id = Bill.to_id
 	AND housing.h_id = Bill.h_id
 		GO
-	EXEC Report_ 
+EXEC Report_ 
 
 --Sarcina 2
 
@@ -454,7 +425,7 @@ SELECT  housing.hname, transport.t_Company
 IF OBJECT_ID('Zile', 'P') IS NOT NULL
 DROP PROC Zile
 	GO
-		CREATE PROCEDURE Zile
+CREATE PROCEDURE Zile
 	AS
 		SELECT customer.fname, customer.lname, package.noofdays
 			FROM customer, package, destination, housing, transport, Bill,tours
@@ -471,10 +442,12 @@ EXEC Zile
 
 IF OBJECT_ID('Country', 'P') IS NOT NULL
 DROP PROC Country
-	GO
+GO
 		CREATE PROCEDURE Country
 	AS
 SELECT count(destination.d_id) as 'Values',to_ as 'Country' FROM destination GROUP by to_
 	GO
 EXEC Country 
+
+
 

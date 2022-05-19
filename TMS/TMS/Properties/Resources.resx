@@ -118,25 +118,43 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="img" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\img.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="img2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\img2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="img3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\img3.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="img4" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\img4.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="img5" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\img5.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="img6" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\img6.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="icons8_moon_96px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8_moon_96px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="img4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\img4.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="img2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\img2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icons8_mars_planet_96px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8_mars_planet_96px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="img7" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\img7.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="mars" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\mars.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="img3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\img3.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="img" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\img.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="moon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\moon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="info" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\info.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="inf" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\inf.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

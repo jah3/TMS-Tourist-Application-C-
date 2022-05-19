@@ -9,6 +9,7 @@ using System.Data.SqlClient;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using Tulpep.NotificationWindow;
 
 namespace TMS
 {
@@ -23,12 +24,290 @@ namespace TMS
             InitializeComponent();
             displaycustomer_data();
             loadTypes();
-
+            Form1 theme_status = new Form1();
+            theme();
             if (Expanded_Information.usernamedata == "admin" && Expanded_Information.passworddata == "admin1")
             {
                 destination_btn.Visible = true;
             }
             else { }
+        }
+        public void theme()
+        {
+            if (Form1.theme_status == "dark")
+            {
+                customer_btn.IdleBorderColor = Color.FromArgb(255, 61, 72);
+                customer_btn.IdleFillColor = Color.FromArgb(255, 61, 72);
+                customer_btn.OnPressedState.FillColor = Color.FromArgb(255, 61, 72);
+                customer_btn.OnPressedState.BorderColor = Color.FromArgb(255, 61, 72);
+
+                package_btn.IdleBorderColor = Color.FromArgb(255, 61, 72);
+                package_btn.IdleFillColor = Color.FromArgb(255, 61, 72);
+                package_btn.OnPressedState.FillColor = Color.FromArgb(255, 61, 72);
+                package_btn.OnPressedState.BorderColor = Color.FromArgb(255, 61, 72);
+
+                Search_By_Type.IdleBorderColor = Color.FromArgb(255, 61, 72);
+                Search_By_Type.IdleFillColor = Color.FromArgb(255, 61, 72);
+                Search_By_Type.OnPressedState.FillColor = Color.FromArgb(255, 61, 72);
+                Search_By_Type.OnPressedState.BorderColor = Color.FromArgb(255, 61, 72);
+
+                Hotel_reservation.IdleBorderColor = Color.FromArgb(255, 61, 72);
+                Hotel_reservation.IdleFillColor = Color.FromArgb(255, 61, 72);
+                Hotel_reservation.OnPressedState.FillColor = Color.FromArgb(255, 61, 72);
+                Hotel_reservation.OnPressedState.BorderColor = Color.FromArgb(255, 61, 72);
+
+                Hote_location.IdleBorderColor = Color.FromArgb(255, 61, 72);
+                Hote_location.IdleFillColor = Color.FromArgb(255, 61, 72);
+                Hote_location.OnPressedState.FillColor = Color.FromArgb(255, 61, 72);
+                Hote_location.OnPressedState.BorderColor = Color.FromArgb(255, 61, 72);
+
+                bunifuButton5.IdleBorderColor = Color.FromArgb(255, 61, 72);
+                bunifuButton5.IdleFillColor = Color.FromArgb(255, 61, 72);
+                bunifuButton5.OnPressedState.FillColor = Color.FromArgb(255, 61, 72);
+                bunifuButton5.OnPressedState.BorderColor = Color.FromArgb(255, 61, 72);
+
+                bunifuButton4.IdleBorderColor = Color.FromArgb(255, 61, 72);
+                bunifuButton4.IdleFillColor = Color.FromArgb(255, 61, 72);
+                bunifuButton4.OnPressedState.FillColor = Color.FromArgb(255, 61, 72);
+                bunifuButton4.OnPressedState.BorderColor = Color.FromArgb(255, 61, 72);
+                
+                destination_btn.IdleBorderColor = Color.FromArgb(255, 61, 72);
+                destination_btn.IdleFillColor = Color.FromArgb(255, 61, 72);
+                destination_btn.OnPressedState.FillColor = Color.FromArgb(255, 61, 72);
+                destination_btn.OnPressedState.BorderColor = Color.FromArgb(255, 61, 72);
+
+                raport_btn.IdleBorderColor = Color.FromArgb(255, 61, 72);
+                raport_btn.IdleFillColor = Color.FromArgb(255, 61, 72);
+                raport_btn.OnPressedState.FillColor = Color.FromArgb(255, 61, 72);
+                raport_btn.OnPressedState.BorderColor = Color.FromArgb(255, 61, 72);
+
+                Customer_Update_Btn.IdleBorderColor = Color.FromArgb(255, 61, 72);
+                Customer_Update_Btn.IdleFillColor = Color.FromArgb(255, 61, 72);
+                Customer_Update_Btn.OnPressedState.FillColor = Color.FromArgb(255, 61, 72);
+                Customer_Update_Btn.OnPressedState.BorderColor = Color.FromArgb(255, 61, 72);
+
+
+                Customer_Delete_Btn.IdleBorderColor = Color.FromArgb(255, 61, 72);   
+                Customer_Delete_Btn.IdleFillColor = Color.FromArgb(255, 61, 72);   
+                Customer_Delete_Btn.OnPressedState.FillColor = Color.FromArgb(255, 61, 72);   
+                Customer_Delete_Btn.OnPressedState.BorderColor = Color.FromArgb(255, 61, 72);
+
+                bunifuButton6.IdleBorderColor = Color.FromArgb(255, 61, 72);
+                bunifuButton6.IdleFillColor = Color.FromArgb(255, 61, 72);   
+                bunifuButton6.OnPressedState.FillColor = Color.FromArgb(255, 61, 72);   
+                bunifuButton6.OnPressedState.BorderColor = Color.FromArgb(255, 61, 72);
+
+                AddTourConfirm.IdleBorderColor = Color.FromArgb(255, 61, 72);
+                AddTourConfirm.IdleFillColor = Color.FromArgb(255, 61, 72);       
+                AddTourConfirm.OnPressedState.FillColor = Color.FromArgb(255, 61, 72);       
+                AddTourConfirm.OnPressedState.BorderColor = Color.FromArgb(255, 61, 72);
+
+                bunifuButton1.IdleBorderColor = Color.FromArgb(255, 61, 72);
+                bunifuButton1.IdleFillColor = Color.FromArgb(255, 61, 72);       
+                bunifuButton1.OnPressedState.FillColor = Color.FromArgb(255, 61, 72);  
+                bunifuButton1.OnPressedState.BorderColor = Color.FromArgb(255, 61, 72);
+
+                confirm2.IdleBorderColor = Color.FromArgb(255, 61, 72);
+                confirm2.IdleFillColor = Color.FromArgb(255, 61, 72);       
+                confirm2.OnPressedState.FillColor = Color.FromArgb(255, 61, 72);  
+                confirm2.OnPressedState.BorderColor = Color.FromArgb(255, 61, 72);
+
+                bunifuButton2.IdleBorderColor = Color.FromArgb(255, 61, 72);
+                bunifuButton2.IdleFillColor = Color.FromArgb(255, 61, 72);       
+                bunifuButton2.OnPressedState.FillColor = Color.FromArgb(255, 61, 72);  
+                bunifuButton2.OnPressedState.BorderColor = Color.FromArgb(255, 61, 72);
+
+                bunifuButton3.IdleBorderColor = Color.FromArgb(255, 61, 72);
+                bunifuButton3.IdleFillColor = Color.FromArgb(255, 61, 72);       
+                bunifuButton3.OnPressedState.FillColor = Color.FromArgb(255, 61, 72);  
+                bunifuButton3.OnPressedState.BorderColor = Color.FromArgb(255, 61, 72);
+
+                bunifuButton7.IdleBorderColor = Color.FromArgb(255, 61, 72);
+                bunifuButton7.IdleFillColor = Color.FromArgb(255, 61, 72);       
+                bunifuButton7.OnPressedState.FillColor = Color.FromArgb(255, 61, 72);  
+                bunifuButton7.OnPressedState.BorderColor = Color.FromArgb(255, 61, 72);
+
+
+                tour.ForeColor = Color.FromArgb(237, 237, 237);
+                retour.ForeColor = Color.FromArgb(237, 237, 237);
+
+                tour_.ForeColor = Color.FromArgb(237, 237, 237);
+                retour_.ForeColor = Color.FromArgb(237, 237, 237);
+
+                tabPage1.BackColor = Color.FromArgb(56, 57, 59);
+                tabPage2.BackColor = Color.FromArgb(56, 57, 59);
+                tabPage3.BackColor = Color.FromArgb(56, 57, 59);
+                tabPage4.BackColor = Color.FromArgb(56, 57, 59);
+                tabPage5.BackColor = Color.FromArgb(56, 57, 59);
+                tabPage6.BackColor = Color.FromArgb(56, 57, 59);
+                tabPage7.BackColor = Color.FromArgb(56, 57, 59);
+                tabPage9.BackColor = Color.FromArgb(56, 57, 59);
+
+                bunifuShadowPanel2.BackColor = Color.FromArgb(56, 57, 59);
+                bunifuShadowPanel2.PanelColor = Color.FromArgb(56, 57, 59);
+                bunifuShadowPanel2.PanelColor2 = Color.FromArgb(56, 57, 59);
+                bunifuShadowPanel2.BorderColor = Color.FromArgb(28, 28, 28);
+
+                bunifuLabel2.ForeColor = Color.FromArgb(237, 237, 237);
+                bunifuLabel8.ForeColor = Color.FromArgb(237, 237, 237);
+                bunifuLabel5.ForeColor = Color.FromArgb(237, 237, 237);
+                bunifuLabel1.ForeColor = Color.FromArgb(237, 237, 237);
+                bunifuLabel7.ForeColor = Color.FromArgb(237, 237, 237);
+                bunifuLabel6.ForeColor = Color.FromArgb(237, 237, 237);
+                bunifuLabel17.ForeColor = Color.FromArgb(237, 237, 237);
+                bunifuLabel3.ForeColor = Color.FromArgb(237, 237, 237);
+                bunifuLabel4.ForeColor = Color.FromArgb(237, 237, 237);
+                bunifuLabel14.ForeColor = Color.FromArgb(237, 237, 237);
+                bunifuLabel13.ForeColor = Color.FromArgb(237, 237, 237);
+                bunifuLabel9.ForeColor = Color.FromArgb(237, 237, 237);
+                bunifuLabel10.ForeColor = Color.FromArgb(237, 237, 237);
+                bunifuLabel11.ForeColor = Color.FromArgb(237, 237, 237);
+                bunifuLabel12.ForeColor = Color.FromArgb(237, 237, 237);
+                bunifuLabel15.ForeColor = Color.FromArgb(237, 237, 237);
+                bunifuLabel16.ForeColor = Color.FromArgb(237, 237, 237);
+                bunifuLabel21.ForeColor = Color.FromArgb(237, 237, 237);
+                bunifuLabel20.ForeColor = Color.FromArgb(237, 237, 237);
+                Customer_City.ForeColor = Color.FromArgb(237, 237, 237);
+                Lab.ForeColor = Color.FromArgb(237, 237, 237);
+                this.BackColor = Color.FromArgb(34, 35, 36);
+            }
+            else
+            {
+                customer_btn.IdleBorderColor = Color.FromArgb(189, 189, 199);
+                customer_btn.IdleFillColor = Color.FromArgb(189, 189, 199);
+                customer_btn.OnPressedState.FillColor = Color.FromArgb(80, 80, 80);
+                customer_btn.OnPressedState.BorderColor = Color.FromArgb(80, 80, 80);
+
+                package_btn.IdleBorderColor = Color.FromArgb(189, 189, 199);
+                package_btn.IdleFillColor = Color.FromArgb(189, 189, 199);
+                package_btn.OnPressedState.FillColor = Color.FromArgb(80, 80, 80);
+                package_btn.OnPressedState.BorderColor = Color.FromArgb(80, 80, 80);
+
+                Search_By_Type.IdleBorderColor = Color.FromArgb(189, 189, 199);
+                Search_By_Type.IdleFillColor = Color.FromArgb(189, 189, 199);
+                Search_By_Type.OnPressedState.FillColor = Color.FromArgb(80, 80, 80);
+                Search_By_Type.OnPressedState.BorderColor = Color.FromArgb(80, 80, 80);
+
+                Hotel_reservation.IdleBorderColor = Color.FromArgb(189, 189, 199);
+                Hotel_reservation.IdleFillColor = Color.FromArgb(189, 189, 199);
+                Hotel_reservation.OnPressedState.FillColor = Color.FromArgb(80, 80, 80);
+                Hotel_reservation.OnPressedState.BorderColor = Color.FromArgb(80, 80, 80);
+
+                Hote_location.IdleBorderColor = Color.FromArgb(189, 189, 199);
+                Hote_location.IdleFillColor = Color.FromArgb(189, 189, 199);
+                Hote_location.OnPressedState.FillColor = Color.FromArgb(80, 80, 80);
+                Hote_location.OnPressedState.BorderColor = Color.FromArgb(80, 80, 80);
+
+                bunifuButton5.IdleBorderColor = Color.FromArgb(189, 189, 199);
+                bunifuButton5.IdleFillColor = Color.FromArgb(189, 189, 199);
+                bunifuButton5.OnPressedState.FillColor = Color.FromArgb(80, 80, 80);
+                bunifuButton5.OnPressedState.BorderColor = Color.FromArgb(80, 80, 80);
+
+                bunifuButton4.IdleBorderColor = Color.FromArgb(189, 189, 199);
+                bunifuButton4.IdleFillColor = Color.FromArgb(189, 189, 199);
+                bunifuButton4.OnPressedState.FillColor = Color.FromArgb(80, 80, 80);
+                bunifuButton4.OnPressedState.BorderColor = Color.FromArgb(80, 80, 80);
+
+                destination_btn.IdleBorderColor = Color.FromArgb(189, 189, 199);
+                destination_btn.IdleFillColor = Color.FromArgb(189, 189, 199);
+                destination_btn.OnPressedState.FillColor = Color.FromArgb(80, 80, 80);
+                destination_btn.OnPressedState.BorderColor = Color.FromArgb(80, 80, 80);
+
+                raport_btn.IdleBorderColor = Color.FromArgb(189, 189, 199);
+                raport_btn.IdleFillColor = Color.FromArgb(189, 189, 199);
+                raport_btn.OnPressedState.FillColor = Color.FromArgb(80, 80, 80);
+                raport_btn.OnPressedState.BorderColor = Color.FromArgb(80, 80, 80);
+
+                Customer_Update_Btn.IdleBorderColor = Color.FromArgb(189, 189, 199);
+                Customer_Update_Btn.IdleFillColor = Color.FromArgb(189, 189, 199);
+                Customer_Update_Btn.OnPressedState.FillColor = Color.FromArgb(189, 189, 199);
+                Customer_Update_Btn.OnPressedState.BorderColor = Color.FromArgb(189, 189, 199);
+
+
+                Customer_Delete_Btn.IdleBorderColor = Color.FromArgb(189, 189, 199);
+                Customer_Delete_Btn.IdleFillColor = Color.FromArgb(189, 189, 199);
+                Customer_Delete_Btn.OnPressedState.FillColor = Color.FromArgb(189, 189, 199);
+                Customer_Delete_Btn.OnPressedState.BorderColor = Color.FromArgb(189, 189, 199);
+
+                bunifuButton6.IdleBorderColor = Color.FromArgb(189, 189, 199);
+                bunifuButton6.IdleFillColor = Color.FromArgb(189, 189, 199);    
+                bunifuButton6.OnPressedState.FillColor = Color.FromArgb(189, 189, 199);    
+                bunifuButton6.OnPressedState.BorderColor = Color.FromArgb(189, 189, 199);
+
+                AddTourConfirm.IdleBorderColor = Color.FromArgb(189, 189, 199);
+                AddTourConfirm.IdleFillColor = Color.FromArgb(189, 189, 199);    
+                AddTourConfirm.OnPressedState.FillColor = Color.FromArgb(189, 189, 199);  
+                AddTourConfirm.OnPressedState.BorderColor = Color.FromArgb(189, 189, 199);
+
+                bunifuButton1.IdleBorderColor = Color.FromArgb(189, 189, 199);
+                bunifuButton1.IdleFillColor = Color.FromArgb(189, 189, 199);    
+                bunifuButton1.OnPressedState.FillColor = Color.FromArgb(189, 189, 199);  
+                bunifuButton1.OnPressedState.BorderColor = Color.FromArgb(189, 189, 199);
+
+                confirm2.IdleBorderColor = Color.FromArgb(189, 189, 199);
+                confirm2.IdleFillColor = Color.FromArgb(189, 189, 199);    
+                confirm2.OnPressedState.FillColor = Color.FromArgb(189, 189, 199);  
+                confirm2.OnPressedState.BorderColor = Color.FromArgb(189, 189, 199);
+
+                bunifuButton2.IdleBorderColor = Color.FromArgb(189, 189, 199);
+                bunifuButton2.IdleFillColor = Color.FromArgb(189, 189, 199);    
+                bunifuButton2.OnPressedState.FillColor = Color.FromArgb(189, 189, 199);  
+                bunifuButton2.OnPressedState.BorderColor = Color.FromArgb(189, 189, 199);
+
+                bunifuButton3.IdleBorderColor = Color.FromArgb(189, 189, 199);
+                bunifuButton3.IdleFillColor = Color.FromArgb(189, 189, 199);    
+                bunifuButton3.OnPressedState.FillColor = Color.FromArgb(189, 189, 199);  
+                bunifuButton3.OnPressedState.BorderColor = Color.FromArgb(189, 189, 199);
+
+                bunifuButton7.IdleBorderColor = Color.FromArgb(189, 189, 199);
+                bunifuButton7.IdleFillColor = Color.FromArgb(189, 189, 199);    
+                bunifuButton7.OnPressedState.FillColor = Color.FromArgb(189, 189, 199);  
+                bunifuButton7.OnPressedState.BorderColor = Color.FromArgb(189, 189, 199);
+
+                tour.ForeColor = Color.Black;
+                retour.ForeColor = Color.Black;
+
+                tour_.ForeColor = Color.Black;
+                retour_.ForeColor = Color.Black;
+
+                tabPage1.BackColor = Color.FromArgb(230, 230, 230);
+                tabPage2.BackColor = Color.FromArgb(230, 230, 230);
+                tabPage3.BackColor = Color.FromArgb(230, 230, 230);
+                tabPage4.BackColor = Color.FromArgb(230, 230, 230);
+                tabPage5.BackColor = Color.FromArgb(230, 230, 230);
+                tabPage6.BackColor = Color.FromArgb(230, 230, 230);
+                tabPage7.BackColor = Color.FromArgb(230, 230, 230);
+                tabPage9.BackColor = Color.FromArgb(230, 230, 230);
+
+                bunifuShadowPanel2.BackColor = Color.Transparent;
+                bunifuShadowPanel2.PanelColor = Color.WhiteSmoke;
+                bunifuShadowPanel2.PanelColor2 = Color.WhiteSmoke;
+                bunifuShadowPanel2.BorderColor = Color.WhiteSmoke;
+
+                bunifuLabel2.ForeColor = Color.FromArgb(80, 80, 80);
+                bunifuLabel8.ForeColor = Color.FromArgb(80, 80, 80);
+                bunifuLabel5.ForeColor = Color.FromArgb(80, 80, 80);
+                bunifuLabel1.ForeColor = Color.FromArgb(80, 80, 80);
+                bunifuLabel7.ForeColor = Color.FromArgb(80, 80, 80);
+                bunifuLabel6.ForeColor = Color.FromArgb(80, 80, 80);
+                bunifuLabel17.ForeColor = Color.FromArgb(80, 80, 80);
+                bunifuLabel3.ForeColor = Color.FromArgb(80, 80, 80);
+                bunifuLabel4.ForeColor = Color.FromArgb(80, 80, 80);
+                bunifuLabel14.ForeColor = Color.FromArgb(80, 80, 80);
+                bunifuLabel13.ForeColor = Color.FromArgb(80, 80, 80);
+                bunifuLabel9.ForeColor = Color.FromArgb(80, 80, 80);
+                bunifuLabel10.ForeColor = Color.FromArgb(80, 80, 80);
+                bunifuLabel11.ForeColor = Color.FromArgb(80, 80, 80);
+                bunifuLabel12.ForeColor = Color.FromArgb(80, 80, 80);
+                bunifuLabel15.ForeColor = Color.FromArgb(80, 80, 80);
+                bunifuLabel16.ForeColor = Color.FromArgb(80, 80, 80);
+                bunifuLabel21.ForeColor = Color.FromArgb(80, 80, 80);
+                bunifuLabel20.ForeColor = Color.FromArgb(80, 80, 80);
+                Customer_City.ForeColor = Color.FromArgb(80, 80, 80);
+                bunifuLabel1.ForeColor = Color.FromArgb(80, 80, 80);
+                Lab.ForeColor = Color.FromArgb(80, 80, 80);
+                this.BackColor = Color.FromArgb(227, 227, 225);
+            }
         }
         void loadTypes()
         {
@@ -320,7 +599,13 @@ namespace TMS
         {           string fileName = Path.Combine(Environment.CurrentDirectory, @"types\types.txt");
                     string aldatatext = System.IO.File.ReadAllText(@"types\types.txt");
                     File.WriteAllText(fileName, aldatatext + bunifuTextBox1.Text + "\n");
-            MessageBox.Show("Data Saved Succesfully");
+            // MessageBox.Show("Data saved successfully");
+            //otifyIcon1.ShowBalloonTip(1000, "Important", "The tour type was added successfully!", ToolTipIcon.Info);  
+            PopupNotifier popup = new PopupNotifier();
+            popup.Image = Properties.Resources.inf;
+            popup.TitleText = "TOURTIME";
+            popup.ContentText = "The tour type was saved successfully!";
+            popup.Popup();
         }
 
         private void Search_By_Type_Click(object sender, EventArgs e)
@@ -408,7 +693,7 @@ namespace TMS
         }
         private void bunifuButton4_Click(object sender, EventArgs e)
         {
-           Pages.PageIndex = 7;
+           Pages.PageIndex = 8;
         }
         private void bunifuButton2_Click(object sender, EventArgs e)
         {
@@ -501,26 +786,7 @@ namespace TMS
 
         private void bunifuButton7_Click(object sender, EventArgs e)
         {
-
-            con.Open();
-            SqlCommand cmd = con.CreateCommand();
-            cmd.CommandType = CommandType.Text;
-            cmd.CommandText = (
-                               "  SELECT customer.fname,package.noofdays,housing.hlocation " +
-                                " FROM customer, package,housing, Bill " +
-                                "  WHERE customer.c_id = Bill.c_id " +
-                                " AND package.p_id = Bill.p_id " +
-                                " AND housing. h_id = Bill.h_id " +
-                                " And package.noofdays like '" + bunifuTextBox4.Text + "'" +
-                                " And housing.hlocation like '" + bunifuDropdown3.Text + "'");
-
-
-            cmd.ExecuteNonQuery();
-            DataTable dt = new DataTable();
-            SqlDataAdapter da = new SqlDataAdapter(cmd);
-            da.Fill(dt);
-            dataGridView7.DataSource = dt;
-            con.Close();
+           
         }
 
         private void bunifuButton8_Click(object sender, EventArgs e)
@@ -567,6 +833,34 @@ namespace TMS
             da.Fill(dt);
             dataGridView2.DataSource = dt;
             con.Close();
+        }
+
+        private void bunifuButton7_Click_1(object sender, EventArgs e)
+        {
+            con.Open();
+            SqlCommand cmd = con.CreateCommand();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = (
+                               "  SELECT customer.fname,package.noofdays,housing.hlocation " +
+                                " FROM customer, package,housing, Bill " +
+                                "  WHERE customer.c_id = Bill.c_id " +
+                                " AND package.p_id = Bill.p_id " +
+                                " AND housing. h_id = Bill.h_id " +
+                                " And package.noofdays like '" + bunifuTextBox4.Text + "'" +
+                                " And housing.hlocation like '" + bunifuDropdown3.Text + "'");
+
+
+            cmd.ExecuteNonQuery();
+            DataTable dt = new DataTable();
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            da.Fill(dt);
+            dataGridView7.DataSource = dt;
+            con.Close();
+        }
+
+        private void bunifuDropdown3_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

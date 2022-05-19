@@ -103,6 +103,9 @@
     <Reference Include="Bunifu.UI.WinForms.BunifuTextbox">
       <HintPath>D:\BunifuCrack-main\Bunifu.UI.WinForms.BunifuTextbox.dll</HintPath>
     </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuToggleSwitch">
+      <HintPath>D:\BunifuCrack-main\Bunifu.UI.WinForms.BunifuToggleSwitch.dll</HintPath>
+    </Reference>
     <Reference Include="Bunifu.UI.WinForms.BunifuToolTip">
       <HintPath>D:\BunifuCrack-main\Bunifu.UI.WinForms.BunifuToolTip.dll</HintPath>
     </Reference>
@@ -158,6 +161,9 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="Tulpep.NotificationWindow, Version=1.1.38.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Tulpep.NotificationWindow.1.1.38\lib\net40\Tulpep.NotificationWindow.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AdminFormDataBase.cs">
@@ -665,6 +671,12 @@
     <None Include="Resources\img5.jpg" />
     <None Include="Resources\img6.jpg" />
     <None Include="Resources\img7.jpg" />
+    <None Include="Resources\icons8_mars_planet_96px.png" />
+    <None Include="Resources\icons8_moon_96px.png" />
+    <None Include="Resources\mars.png" />
+    <None Include="Resources\moon.png" />
+    <None Include="Resources\info.png" />
+    <None Include="Resources\inf.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

@@ -15,11 +15,63 @@ namespace TMS
     {
         public static string usernamedata ="";
         public static string passworddata = "";
+        public  string theme_status = "";
 
         public Expanded_Information()
         {
             InitializeComponent();
+            theme();
             bunifuTextBox2.UseSystemPasswordChar = true;
+            Form1 theme_status = new Form1();
+        }
+        public void theme()
+        {
+            if(Form1.theme_status == "dark")
+            {
+                bunifuButton1.IdleBorderColor = Color.FromArgb(255, 61, 72);
+                bunifuButton1.IdleFillColor = Color.FromArgb(255, 61, 72);
+                bunifuButton1.OnPressedState.FillColor = Color.FromArgb(255, 61, 72);
+                bunifuButton1.OnPressedState.BorderColor = Color.FromArgb(255, 61, 72);
+
+
+                bunifuShadowPanel2.BackColor = Color.FromArgb(56, 57, 59);
+                bunifuShadowPanel2.PanelColor = Color.FromArgb(56, 57, 59);
+                bunifuShadowPanel2.PanelColor2 = Color.FromArgb(56, 57, 59);
+                bunifuShadowPanel2.BorderColor = Color.FromArgb(28, 28, 28);
+
+
+                bunifuLabel2.ForeColor = Color.FromArgb(237, 237, 237);
+                bunifuLabel8.ForeColor = Color.FromArgb(237, 237, 237);
+                bunifuLabel5.ForeColor = Color.FromArgb(237, 237, 237);
+                bunifuLabel6.ForeColor = Color.FromArgb(237, 237, 237);
+                bunifuLabel1.ForeColor = Color.FromArgb(237, 237, 237);
+                bunifuLabel3.ForeColor = Color.FromArgb(237, 237, 237);
+                this.BackColor = Color.FromArgb(34, 35, 36);
+            }
+            else
+            {
+                bunifuButton1.IdleBorderColor = Color.FromArgb(189, 189, 199);
+                bunifuButton1.IdleFillColor = Color.FromArgb(189, 189, 199);
+                bunifuButton1.OnPressedState.FillColor = Color.FromArgb(80, 80, 80);
+                bunifuButton1.OnPressedState.BorderColor = Color.FromArgb(80, 80, 80);
+
+                bunifuShadowPanel2.BackColor = Color.Transparent;
+                bunifuShadowPanel2.PanelColor = Color.WhiteSmoke;
+                bunifuShadowPanel2.PanelColor2 = Color.WhiteSmoke;
+                bunifuShadowPanel2.BorderColor = Color.WhiteSmoke;
+
+                bunifuLabel2.ForeColor = Color.FromArgb(80, 80, 80);
+                bunifuLabel8.ForeColor = Color.FromArgb(80, 80, 80);
+                bunifuLabel5.ForeColor = Color.FromArgb(80, 80, 80);
+                bunifuLabel6.ForeColor = Color.FromArgb(80, 80, 80);
+                bunifuLabel1.ForeColor = Color.FromArgb(80, 80, 80);
+                bunifuLabel3.ForeColor = Color.FromArgb(80, 80, 80);
+                this.BackColor = Color.FromArgb(227, 227, 225);
+            }
+        }
+        private void Expanded_Information_Load(object sender, EventArgs e)
+        {
+
         }
 
         private void Close_Click(object sender, EventArgs e)
@@ -100,5 +152,7 @@ namespace TMS
         {
          System.Diagnostics.Process.Start("https://mail.google.com/mail/u/1/#inbox?compose=GTvVlcSMTgdXzsWShncKbwzTSmcKRdmzmsZHSZbLGkNDvFgzLQrQTgNlzsNVbrmCjXdbJVvhVlSnK");
         }
+
+
     }
 }

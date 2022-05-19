@@ -225,3 +225,5 @@ C:\Users\user\Desktop\PracticaMain\TMS\TMS\bin\Debug\EntityFramework.SqlServer.d
 C:\Users\user\Desktop\PracticaMain\TMS\TMS\bin\Debug\EntityFramework.xml
 C:\Users\user\Desktop\PracticaMain\TMS\TMS\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\user\Desktop\PracticaMain\TMS\TMS\bin\Debug\Bunifu.UI.WinForms.BunifuCheckBox.dll
+C:\Users\user\Desktop\PracticaMain\TMS\TMS\bin\Debug\Bunifu.UI.WinForms.BunifuToggleSwitch.dll
+C:\Users\user\Desktop\PracticaMain\TMS\TMS\bin\Debug\Tulpep.NotificationWindow.dll
