@@ -31,6 +31,15 @@ namespace TMS
                 destination_btn.Visible = true;
             }
             else { }
+            bunifuToolTip1.SetToolTip(this.customer_btn, "Information about all customers");
+            bunifuToolTip1.SetToolTip(this.package_btn, "Adding new tour type");
+            bunifuToolTip1.SetToolTip(this.Search_By_Type, "Information about  tours type between dates");
+            bunifuToolTip1.SetToolTip(this.Hotel_reservation, "Information about  hotels type between dates");
+            bunifuToolTip1.SetToolTip(this.Hote_location, "Information about hotels and registered types in there");
+            bunifuToolTip1.SetToolTip(this.bunifuButton5, "Information about hotels and transport");
+            bunifuToolTip1.SetToolTip(this.bunifuButton4, "Information about customer, stayed N number of days in specified hotel");
+            bunifuToolTip1.SetToolTip(this.destination_btn, "Adding new user");
+            bunifuToolTip1.SetToolTip(this.raport_btn, "Report and Diagram");
         }
         public void theme()
         {
@@ -630,7 +639,7 @@ namespace TMS
             con.Open();
             SqlCommand cmd = con.CreateCommand();
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = (   "SELECT customer.fname, package.packagetype, destination.to_ , destination.tour, destination.retour, tours.types_ ,  (housing.price + transport.t_cost + package.cost) AS Price_total,(housing.price + transport.t_cost + package.cost)-  (package.discount/100) * (housing.price + transport.t_cost + package.cost)  AS Pret_Cu_Reducere" +
+            cmd.CommandText = ("SELECT customer.fname, customer.lname, package.packagetype, destination.to_ , destination.tour, destination.retour, tours.types_ ,  (housing.price + transport.t_cost + package.cost) AS Price_total,(housing.price + transport.t_cost + package.cost)-  (package.discount/100) * (housing.price + transport.t_cost + package.cost)  AS Pret_Cu_Reducere" +
                                   " FROM customer, package, destination, housing, transport, Bill, tours "
                                 + " WHERE customer.c_id = Bill.c_id"
                                 + " AND package.p_id = Bill.p_id "
@@ -638,9 +647,9 @@ namespace TMS
                                 + " AND housing. h_id = Bill.h_id"
                                 + " AND transport.t_id = Bill.t_id"
                                 + " AND tours.to_id = Bill.to_id"
-                                + " AND tours.types_ like '%"+ bunifuDropdown1.Text + "'"
-                                + " and destination.tour like '" + datestring + "'"
-                                + " and destination.retour like '" + datestring2 + "'");
+                                + " AND tours.types_ like '%" + bunifuDropdown1.Text + "'"
+                                + " AND destination.tour BETWEEN  '" + datestring + "' AND '" + datestring2 + "'");
+
             cmd.ExecuteNonQuery();
             DataTable dt = new DataTable();
             SqlDataAdapter da = new SqlDataAdapter(cmd);
@@ -663,14 +672,13 @@ namespace TMS
             con.Open();
             SqlCommand cmd = con.CreateCommand();
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = (" SELECT customer.fname,housing.hname, destination.to_,destination.tour, destination.retour" +
+            cmd.CommandText = (" SELECT customer.fname, customer.lname ,housing.hname, destination.to_,destination.tour, destination.retour" +
                                " FROM customer, destination, housing, Bill"
                                + " WHERE customer.c_id = Bill.c_id"
                                + " AND destination.d_id = Bill.d_id"
                                + " AND housing. h_id = Bill.h_id"
                                + " AND housing.hname like '" + hotels.Text+ "'"
-                               + " and destination.tour like '" + datestring + "'"
-                               + " and destination.retour like '" + datestring2 + "'");    
+                               + " AND destination.tour BETWEEN  '" + datestring + "' AND '" + datestring2 + "'");
             cmd.ExecuteNonQuery();
             DataTable dt = new DataTable();
             SqlDataAdapter da = new SqlDataAdapter(cmd);
@@ -841,7 +849,7 @@ namespace TMS
             SqlCommand cmd = con.CreateCommand();
             cmd.CommandType = CommandType.Text;
             cmd.CommandText = (
-                               "  SELECT customer.fname,package.noofdays,housing.hlocation " +
+                               "  SELECT customer.fname , customer.lname ,package.noofdays,housing.hlocation " +
                                 " FROM customer, package,housing, Bill " +
                                 "  WHERE customer.c_id = Bill.c_id " +
                                 " AND package.p_id = Bill.p_id " +
@@ -859,6 +867,11 @@ namespace TMS
         }
 
         private void bunifuDropdown3_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void hotels_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

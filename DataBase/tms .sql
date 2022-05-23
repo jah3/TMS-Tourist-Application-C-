@@ -387,8 +387,8 @@ WHERE customer.c_id = Bill.c_id
 AND  destination.d_id = Bill.d_id 
 AND housing. h_id = Bill.h_id 
 AND housing.hname like 'Borgergade'
-and destination.tour like'2/09/2022'
-and destination.retour like'2/15/2022'
+and destination.tour like'5/4/2022'
+and destination.retour like'5/20/2022'
 --6
 SELECT housing.hname, tours.types_
 FROM  tours, housing, Bill
@@ -449,5 +449,14 @@ SELECT count(destination.d_id) as 'Values',to_ as 'Country' FROM destination GRO
 	GO
 EXEC Country 
 
+EXEC Report_ 
+
+SELECT customer.fname,customer.lname,housing.hname, destination.to_,destination.tour, destination.retour
+FROM customer, destination, housing, Bill
+WHERE customer.c_id = Bill.c_id 
+AND  destination.d_id = Bill.d_id 
+AND housing. h_id = Bill.h_id 
+AND housing.hname like 'Akra Hotel'
+and destination.tour BETWEEN  '2/20/2022' AND '7/20/2022'
 
 

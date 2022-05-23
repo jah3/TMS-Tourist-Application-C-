@@ -13,6 +13,7 @@ namespace TMS
 {
     public partial class Form1 : Form
     {
+
         SqlConnection con = new SqlConnection(@"Data Source=localhost;Initial Catalog=Turism;Integrated Security=True");
     
         public static string from_, where_, to_, seats_, tour_, retour_, uname_, lname_, address_, email_, tourstype_, package_, transport_,hotel_;
@@ -33,6 +34,10 @@ namespace TMS
             loadTypes();
             this.bunifuPictureBox4.Image = Properties.Resources.mars;
         }
+
+
+
+
 
         public void theme()
         {
@@ -268,6 +273,15 @@ namespace TMS
            
         }
 
+        private void bunifuToolTip1_Popup(object sender, Bunifu.UI.WinForms.BunifuToolTip.PopupEventArgs e)
+        {
+
+        }
+
+        private void bunifuToolTip1_Popup_1(object sender, Bunifu.UI.WinForms.BunifuToolTip.PopupEventArgs e)
+        {
+                    
+        }
 
         private void bunifuPanel1_Click(object sender, EventArgs e)
         {
