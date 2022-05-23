@@ -875,5 +875,42 @@ namespace TMS
         {
 
         }
+
+        private void bunifuButton10_Click(object sender, EventArgs e)
+        {
+            con.Open();
+            SqlCommand cmd = con.CreateCommand();
+            cmd.CommandType = CommandType.Text;
+
+            if (Customer_name.Text == "" && Customer_lname.Text == "")
+            {
+
+                cmd.CommandText = (" EXEC SelectAllCustomers ");
+                goto here;
+            }
+            else
+            {
+                cmd.CommandText = ("  SELECT customer.c_id, customer.fname, customer.lname,  package.packagetype, destination.to_, housing.hlocation, housing.hname  , tours.types_ ,(housing.price + transport.t_cost + package.cost) AS Price_total,(housing.price + transport.t_cost + package.cost)-  (package.discount/100) * (housing.price + transport.t_cost + package.cost)  AS Pret_Cu_Reducere"
+                            + "  FROM customer, package, destination, housing, transport, Bill, tours"
+                           + "  WHERE customer.c_id = Bill.c_id"
+                           + "  AND package.p_id = Bill.p_id"
+                           + "  AND destination.d_id = Bill.d_id"
+                           + "  AND housing. h_id = Bill.h_id"
+                           + "  AND transport.t_id = Bill.t_id"
+                           + "  AND tours.to_id = Bill.to_id"
+                           + "  AND housing.h_id = Bill.h_id"
+                           + "  AND customer.fname like '" + Customer_name.Text + "' AND customer.lname like '" + Customer_lname.Text + "'");
+                goto here;
+            }
+            here:
+            cmd.ExecuteNonQuery();
+            DataTable dt = new DataTable();
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            da.Fill(dt);
+            dataGridView2.DataSource = dt;
+            Customer_name.Text = "";
+            Customer_lname.Text = "";
+            con.Close();
+        }
     }
 }
